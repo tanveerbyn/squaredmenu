@@ -1,0 +1,579 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.squaredmenu"
+4    android:versionCode="5"
+5    android:versionName="3.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:6:5-64
+12-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:6:22-62
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:7:5-79
+13-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:7:22-77
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:8:5-80
+14-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:5:5-78
+15-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:5:22-76
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:4:5-67
+16-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:4:22-64
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->[com.facebook.flipper:flipper:0.75.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e1d2aa9c4394723ad18567b7f6543561/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+17-->[com.facebook.flipper:flipper:0.75.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e1d2aa9c4394723ad18567b7f6543561/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[:react-native-community_netinfo] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
+18-->[:react-native-community_netinfo] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
+19    <uses-permission android:name="android.permission.WAKE_LOCK" />
+19-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+19-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+20
+21    <queries>
+21-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+22        <intent>
+22-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+23            <action android:name="android.media.action.IMAGE_CAPTURE" />
+23-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+23-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+24        </intent>
+25    </queries>
+26
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+27-->[:react-native-maps] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+27-->[:react-native-maps] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
+28    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+28-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
+28-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
+29    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- for android -->
+29-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:5-110
+29-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:22-107
+30    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+31    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+32    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+33    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+34    <!-- for Samsung -->
+35    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
+36    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
+37    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
+38    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
+38-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
+39    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
+39-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
+40    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
+40-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
+41    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
+42    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
+43    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
+44    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
+45    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
+46    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
+47    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
+48    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
+49    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
+50    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/d3657ceb8a22086ddca45ade2500415a/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
+51
+52    <uses-feature
+52-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+53        android:glEsVersion="0x00020000"
+53-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+54        android:required="true" />
+54-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+55
+56    <application
+56-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:7:5-41:19
+57        android:name="com.squaredmenu.MainApplication"
+57-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:8:7-38
+58        android:allowBackup="false"
+58-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:12:7-34
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.3.2] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a716fbd39f565f251670976ce53d159c/core-1.3.2/AndroidManifest.xml:24:18-86
+60        android:debuggable="true"
+61        android:icon="@mipmap/ic_launcher"
+61-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:10:7-41
+62        android:label="@string/app_name"
+62-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:9:7-39
+63        android:roundIcon="@mipmap/ic_launcher_round"
+63-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:11:7-52
+64        android:supportsRtl="true"
+64-->[com.facebook.android:facebook-android-sdk:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/12c1cbaf4c3ab39e9ef4f242974d91fb/jetified-facebook-android-sdk-8.2.0/AndroidManifest.xml:28:18-44
+65        android:theme="@style/AppTheme"
+65-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:14:7-38
+66        android:usesCleartextTraffic="true" >
+66-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:13:7-42
+67        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+67-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:16:9-86
+67-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/debug/AndroidManifest.xml:16:19-83
+68
+69        <meta-data
+69-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:15:7-17:60
+70            android:name="com.google.android.geo.API_KEY"
+70-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:16:3-48
+71            android:value="AIzaSyBsqmLSVPGVmlSVcVmrLY_ynqvMLRUyeZU" />
+71-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:17:3-58
+72
+73        <activity
+73-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:18:7-26:18
+74            android:name="com.squaredmenu.SplashActivity"
+74-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:19:9-39
+75            android:label="@string/app_name"
+75-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:21:9-41
+76            android:theme="@style/SplashTheme" >
+76-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:20:9-43
+77            <intent-filter>
+77-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:22:9-25:25
+78                <action android:name="android.intent.action.MAIN" />
+78-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:23:13-65
+78-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:23:21-62
+79
+80                <category android:name="android.intent.category.LAUNCHER" />
+80-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:24:13-73
+80-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:24:23-70
+81            </intent-filter>
+82        </activity>
+83        <activity
+83-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:27:7-39:18
+84            android:name="com.squaredmenu.MainActivity"
+84-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:28:9-37
+85            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+85-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:30:9-86
+86            android:exported="true"
+86-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:33:9-32
+87            android:label="@string/app_name"
+87-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:29:9-41
+88            android:launchMode="singleTask"
+88-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:31:9-40
+89            android:screenOrientation="portrait"
+89-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:34:9-45
+90            android:windowSoftInputMode="adjustResize" >
+90-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:32:9-51
+91            <intent-filter>
+91-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:35:9-38:25
+92                <action android:name="android.intent.action.MAIN" />
+92-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:23:13-65
+92-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:23:21-62
+93
+94                <category android:name="android.intent.category.DEFAULT" />
+94-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:37:13-72
+94-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:37:23-69
+95            </intent-filter>
+96        </activity>
+97
+98        <meta-data
+98-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:40:7-105
+99            android:name="com.facebook.sdk.ApplicationId"
+99-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:40:18-63
+100            android:value="@string/facebook_app_id" />
+100-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:40:64-103
+101
+102        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
+102-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-111
+102-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-108
+103        <service
+103-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-23:19
+104            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+104-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-95
+105            android:exported="false" >
+105-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
+106            <intent-filter>
+106-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
+107                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+107-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
+107-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
+108            </intent-filter>
+109        </service>
+110
+111        <receiver
+111-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-32:20
+112            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+112-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-96
+113            android:exported="true"
+113-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-36
+114            android:permission="com.google.android.c2dm.permission.SEND" >
+114-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-73
+115            <intent-filter>
+115-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
+116                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+116-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
+116-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
+117            </intent-filter>
+118        </receiver>
+119
+120        <meta-data
+120-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:9-36:36
+121            android:name="firebase_messaging_auto_init_enabled"
+121-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:13-64
+122            android:value="true" />
+122-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:13-33
+123        <meta-data
+123-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:9-39:32
+124            android:name="com.google.firebase.messaging.default_notification_channel_id"
+124-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-89
+125            android:value="" />
+125-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-29
+126        <meta-data
+126-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:9-42:47
+127            android:name="com.google.firebase.messaging.default_notification_color"
+127-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:41:13-84
+128            android:resource="@color/white" />
+128-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:42:13-44
+129
+130        <receiver
+130-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-19:20
+131            android:name="com.learnium.RNDeviceInfo.RNDeviceReceiver"
+131-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-70
+132            android:enabled="true"
+132-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-35
+133            android:exported="true" >
+133-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-36
+134            <intent-filter>
+134-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-18:29
+135                <action android:name="com.android.vending.INSTALL_REFERRER" />
+135-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-79
+135-->[:react-native-device-info] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:25-76
+136            </intent-filter>
+137        </receiver>
+138
+139        <provider
+139-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+140            android:name="androidx.core.content.FileProvider"
+140-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+141            android:authorities="com.squaredmenu.provider"
+141-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+142            android:exported="false"
+142-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+143            android:grantUriPermissions="true" >
+143-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+144            <meta-data
+144-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+145                android:name="android.support.FILE_PROVIDER_PATHS"
+145-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+146                android:resource="@xml/provider_paths" />
+146-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+147        </provider>
+148
+149        <activity
+149-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+150            android:name="com.yalantis.ucrop.UCropActivity"
+150-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
+151            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+151-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+152
+153        <provider
+153-->[:react-native-webview] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+154            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+154-->[:react-native-webview] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+155            android:authorities="com.squaredmenu.fileprovider"
+155-->[:react-native-webview] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+156            android:exported="false"
+156-->[:react-native-webview] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+157            android:grantUriPermissions="true" >
+157-->[:react-native-webview] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+158            <meta-data
+158-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+159                android:name="android.support.FILE_PROVIDER_PATHS"
+159-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+160                android:resource="@xml/file_provider_paths" />
+160-->[:react-native-image-crop-picker] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+161        </provider>
+162
+163        <activity
+163-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:30:9-33:66
+164            android:name="com.facebook.FacebookActivity"
+164-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:31:13-57
+165            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+165-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:32:13-96
+166            android:theme="@style/com_facebook_activity_theme" />
+166-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:33:13-63
+167        <activity android:name="com.facebook.CustomTabMainActivity" />
+167-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:34:9-71
+167-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:34:19-68
+168        <activity
+168-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:35:9-49:20
+169            android:name="com.facebook.CustomTabActivity"
+169-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:36:13-58
+170            android:exported="true" >
+170-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:37:13-36
+171            <intent-filter>
+171-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:39:13-48:29
+172                <action android:name="android.intent.action.VIEW" />
+172-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:40:17-69
+172-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:40:25-66
+173
+174                <category android:name="android.intent.category.DEFAULT" />
+174-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:37:13-72
+174-->/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/android/app/src/main/AndroidManifest.xml:37:23-69
+175                <category android:name="android.intent.category.BROWSABLE" />
+175-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:43:17-78
+175-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:43:27-75
+176
+177                <data
+177-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:45:17-47:50
+178                    android:host="cct.com.squaredmenu"
+178-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:46:21-56
+179                    android:scheme="fbconnect" />
+179-->[com.facebook.android:facebook-common:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/6b05e846dba635895a78e36193cce5e5/jetified-facebook-common-8.2.0/AndroidManifest.xml:47:21-47
+180            </intent-filter>
+181        </activity>
+182        <!--
+183         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+184         with the application context. This config is merged in with the host app's manifest,
+185         but there can only be one provider with the same authority activated at any given
+186         point; so if the end user has two or more different apps that use Facebook SDK, only the
+187         first one will be able to use the provider. To work around this problem, we use the
+188         following placeholder in the authority to identify each host application as if it was
+189         a completely different provider.
+190        -->
+191        <provider
+191-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:39:9-42:40
+192            android:name="com.facebook.internal.FacebookInitProvider"
+192-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:40:13-70
+193            android:authorities="com.squaredmenu.FacebookInitProvider"
+193-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:41:13-72
+194            android:exported="false" />
+194-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:42:13-37
+195
+196        <receiver
+196-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:44:9-50:20
+197            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+197-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:45:13-86
+198            android:exported="false" >
+198-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:46:13-37
+199            <intent-filter>
+199-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:47:13-49:29
+200                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+200-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:48:17-95
+200-->[com.facebook.android:facebook-core:8.2.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/eed6770ce6bed00096993d8bf32d4d3e/jetified-facebook-core-8.2.0/AndroidManifest.xml:48:25-92
+201            </intent-filter>
+202        </receiver>
+203        <receiver
+203-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
+204            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+204-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
+205            android:exported="true"
+205-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
+206            android:permission="com.google.android.c2dm.permission.SEND" >
+206-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
+207            <intent-filter>
+207-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-31:29
+208                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+208-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:17-81
+208-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:25-78
+209            </intent-filter>
+210        </receiver>
+211        <!--
+212             FirebaseMessagingService performs security checks at runtime,
+213             but set to not exported to explicitly avoid allowing another app to call it.
+214        -->
+215        <service
+215-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
+216            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+216-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
+217            android:directBootAware="true"
+217-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
+218            android:exported="false" >
+218-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
+219            <intent-filter android:priority="-500" >
+219-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-22:29
+220                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+220-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-78
+220-->[:react-native-firebase_messaging] /Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/squaredmenuapp/node_modules/@react-native-firebase/messaging/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-75
+221            </intent-filter>
+222        </service>
+223        <service
+223-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
+224            android:name="com.google.firebase.components.ComponentDiscoveryService"
+224-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:50:13-84
+225            android:directBootAware="true"
+225-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+226            android:exported="false" >
+226-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
+227            <meta-data
+227-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
+228                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+228-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
+229                android:value="com.google.firebase.components.ComponentRegistrar" />
+229-->[com.google.firebase:firebase-messaging:22.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/360319d80e27666e420d6222c062d2f1/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
+230            <meta-data
+230-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/614feabac1c9d26b17a8139d7956ee93/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+231                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+231-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/614feabac1c9d26b17a8139d7956ee93/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+232                android:value="com.google.firebase.components.ComponentRegistrar" />
+232-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/614feabac1c9d26b17a8139d7956ee93/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+233            <meta-data
+233-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/33dd554b9e5392b54074801ae93e62d3/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:30:13-32:85
+234                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+234-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/33dd554b9e5392b54074801ae93e62d3/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:31:17-139
+235                android:value="com.google.firebase.components.ComponentRegistrar" />
+235-->[com.google.android.gms:play-services-measurement-api:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/33dd554b9e5392b54074801ae93e62d3/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:32:17-82
+236            <meta-data
+236-->[com.google.firebase:firebase-installations:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/c929ae051cc6a6bab61aae3f23746900/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+237                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+237-->[com.google.firebase:firebase-installations:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/c929ae051cc6a6bab61aae3f23746900/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+238                android:value="com.google.firebase.components.ComponentRegistrar" />
+238-->[com.google.firebase:firebase-installations:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/c929ae051cc6a6bab61aae3f23746900/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+239        </service>
+240        <service
+240-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+241            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+241-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+242            android:exported="false" >
+242-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+243            <meta-data
+243-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+244                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+244-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+245                android:value="cct" />
+245-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7447e94a65cf0b9e8b14dc5cfdf99840/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+246        </service>
+247        <service
+247-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+248            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+248-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+249            android:exported="false"
+249-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+250            android:permission="android.permission.BIND_JOB_SERVICE" >
+250-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+251        </service>
+252
+253        <receiver
+253-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+254            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+254-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+255            android:exported="false" />
+255-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/e21269082c3e7c37343650d0cc60b9ba/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+256
+257        <meta-data
+257-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/117371cbaa60254c4f9b5cc6f71d5780/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+258            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+258-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/117371cbaa60254c4f9b5cc6f71d5780/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+259            android:value="GlideModule" />
+259-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/117371cbaa60254c4f9b5cc6f71d5780/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+260
+261        <receiver
+261-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:29:9-33:20
+262            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+262-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:30:13-85
+263            android:enabled="true"
+263-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:31:13-35
+264            android:exported="false" >
+264-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:32:13-37
+265        </receiver>
+266
+267        <service
+267-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:35:9-38:40
+268            android:name="com.google.android.gms.measurement.AppMeasurementService"
+268-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:36:13-84
+269            android:enabled="true"
+269-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:37:13-35
+270            android:exported="false" />
+270-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:38:13-37
+271        <service
+271-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:39:9-43:72
+272            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+272-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:40:13-87
+273            android:enabled="true"
+273-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:41:13-35
+274            android:exported="false"
+274-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:42:13-37
+275            android:permission="android.permission.BIND_JOB_SERVICE" />
+275-->[com.google.android.gms:play-services-measurement:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/07a5700badd935fc2cc591d00aab10a5/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:43:13-69
+276
+277        <activity
+277-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:23:9-27:75
+278            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+278-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:24:13-93
+279            android:excludeFromRecents="true"
+279-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:25:13-46
+280            android:exported="false"
+280-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:26:13-37
+281            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+281-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:27:13-72
+282        <!--
+283            Service handling Google Sign-In user revocation. For apps that do not integrate with
+284            Google Sign-In, this service will never be started.
+285        -->
+286        <service
+286-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:33:9-37:51
+287            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+287-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:34:13-89
+288            android:exported="true"
+288-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:35:13-36
+289            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+289-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:36:13-107
+290            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+290-->[com.google.android.gms:play-services-auth:19.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/4aca5ebb8bc1aab19c7925eb2ab19adc/jetified-play-services-auth-19.0.0/AndroidManifest.xml:37:13-48
+291        <uses-library
+291-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+292            android:name="org.apache.http.legacy"
+292-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+293            android:required="false" />
+293-->[com.google.android.gms:play-services-maps:17.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/754e88296a4f969dfd10d0194259faaf/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+294
+295        <activity
+295-->[com.google.android.gms:play-services-base:17.1.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/21927a8180efebde93f368a3ac143faf/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+296            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+296-->[com.google.android.gms:play-services-base:17.1.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/21927a8180efebde93f368a3ac143faf/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+297            android:exported="false"
+297-->[com.google.android.gms:play-services-base:17.1.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/21927a8180efebde93f368a3ac143faf/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+298            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+298-->[com.google.android.gms:play-services-base:17.1.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/21927a8180efebde93f368a3ac143faf/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+299
+300        <provider
+300-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+301            android:name="com.google.firebase.provider.FirebaseInitProvider"
+301-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+302            android:authorities="com.squaredmenu.firebaseinitprovider"
+302-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+303            android:directBootAware="true"
+303-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+304            android:exported="false"
+304-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+305            android:initOrder="100" />
+305-->[com.google.firebase:firebase-common:20.0.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/7429cb0d5e7130993f3ad3aba5557ce6/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+306
+307        <meta-data
+307-->[com.google.android.gms:play-services-basement:17.1.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/345ab3ac7d764c8b10080acb609ca770/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
+308            android:name="com.google.android.gms.version"
+308-->[com.google.android.gms:play-services-basement:17.1.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/345ab3ac7d764c8b10080acb609ca770/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
+309            android:value="@integer/google_play_services_version" />
+309-->[com.google.android.gms:play-services-basement:17.1.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/345ab3ac7d764c8b10080acb609ca770/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
+310    </application>
+311
+312</manifest>

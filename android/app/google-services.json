@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "955337206220",
+    "project_id": "sqauredmenu",
+    "storage_bucket": "sqauredmenu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955337206220:android:656c8873c957f8ec681569",
+        "android_client_info": {
+          "package_name": "com.squaredmenu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955337206220-f98s98tmtj8nlkccdg99u38q5hkrclub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.squaredmenu",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "955337206220-j3ap125m4dg6hbk9hsqam392u8g63vq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8970GHRC44w6OUu6kKf-DjU_14nLLIEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955337206220-j3ap125m4dg6hbk9hsqam392u8g63vq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

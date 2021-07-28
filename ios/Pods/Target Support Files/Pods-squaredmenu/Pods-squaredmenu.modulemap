@@ -1,0 +1,6 @@
+module Pods_squaredmenu {
+  umbrella header "Pods-squaredmenu-umbrella.h"
+
+  export *
+  module * { export * }
+}
