@@ -1,0 +1,12 @@
+com/squaredmenu/BuildConfig.java
+ com.squaredmenu.BuildConfig
+com/squaredmenu/SplashActivity.java
+ com.squaredmenu.SplashActivity
+com/squaredmenu/MainApplication.java
+ com.squaredmenu.MainApplication
+ com.squaredmenu.MainApplication$1
+com/squaredmenu/MainActivity.java
+ com.squaredmenu.MainActivity
+ com.squaredmenu.MainActivity$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

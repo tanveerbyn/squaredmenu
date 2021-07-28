@@ -27,6 +27,8 @@ import org.reactnative.maskedview.RNCMaskedViewPackage;
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 // @react-native-firebase/app
 import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+// @react-native-firebase/crashlytics
+import io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsPackage;
 // @react-native-firebase/messaging
 import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 // @react-native-picker/picker
@@ -114,6 +116,7 @@ public class PackageList {
       new RNCMaskedViewPackage(),
       new NetInfoPackage(),
       new ReactNativeFirebaseAppPackage(),
+      new ReactNativeFirebaseCrashlyticsPackage(),
       new ReactNativeFirebaseMessagingPackage(),
       new RNCPickerPackage(),
       new RNDeviceInfo(),

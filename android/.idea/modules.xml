@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/squaredmenu.iml" filepath="$PROJECT_DIR$/.idea/modules/squaredmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/squaredmenu.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/squaredmenu.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/675811102/squaredmenu.invertase_react-native-apple-authentication.iml" filepath="$PROJECT_DIR$/.idea/modules/675811102/squaredmenu.invertase_react-native-apple-authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1359268704/squaredmenu.react-native-async-storage_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/1359268704/squaredmenu.react-native-async-storage_async-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1280651336/squaredmenu.react-native-clipboard_clipboard.iml" filepath="$PROJECT_DIR$/.idea/modules/-1280651336/squaredmenu.react-native-clipboard_clipboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-362638725/squaredmenu.react-native-community_geolocation.iml" filepath="$PROJECT_DIR$/.idea/modules/-362638725/squaredmenu.react-native-community_geolocation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/742448363/squaredmenu.react-native-community_google-signin.iml" filepath="$PROJECT_DIR$/.idea/modules/742448363/squaredmenu.react-native-community_google-signin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1295383012/squaredmenu.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-1295383012/squaredmenu.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/221084096/squaredmenu.react-native-community_netinfo.iml" filepath="$PROJECT_DIR$/.idea/modules/221084096/squaredmenu.react-native-community_netinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-720258886/squaredmenu.react-native-device-info.iml" filepath="$PROJECT_DIR$/.idea/modules/-720258886/squaredmenu.react-native-device-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1122715947/squaredmenu.react-native-fast-image.iml" filepath="$PROJECT_DIR$/.idea/modules/-1122715947/squaredmenu.react-native-fast-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/777812915/squaredmenu.react-native-fbsdk.iml" filepath="$PROJECT_DIR$/.idea/modules/777812915/squaredmenu.react-native-fbsdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1790017570/squaredmenu.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/-1790017570/squaredmenu.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-330335274/squaredmenu.react-native-firebase_crashlytics.iml" filepath="$PROJECT_DIR$/.idea/modules/-330335274/squaredmenu.react-native-firebase_crashlytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-166727679/squaredmenu.react-native-firebase_messaging.iml" filepath="$PROJECT_DIR$/.idea/modules/-166727679/squaredmenu.react-native-firebase_messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-120838597/squaredmenu.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-120838597/squaredmenu.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/react-native-google-signin/squaredmenu.react-native-google-signin.iml" filepath="$PROJECT_DIR$/.idea/modules/react-native-google-signin/squaredmenu.react-native-google-signin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1786171529/squaredmenu.react-native-i18n.iml" filepath="$PROJECT_DIR$/.idea/modules/1786171529/squaredmenu.react-native-i18n.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1753617454/squaredmenu.react-native-image-crop-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/1753617454/squaredmenu.react-native-image-crop-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1767154440/squaredmenu.react-native-maps.iml" filepath="$PROJECT_DIR$/.idea/modules/-1767154440/squaredmenu.react-native-maps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2043985610/squaredmenu.react-native-picker_picker.iml" filepath="$PROJECT_DIR$/.idea/modules/2043985610/squaredmenu.react-native-picker_picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-505669901/squaredmenu.react-native-push-notification.iml" filepath="$PROJECT_DIR$/.idea/modules/-505669901/squaredmenu.react-native-push-notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/486686465/squaredmenu.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/486686465/squaredmenu.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/489593828/squaredmenu.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/489593828/squaredmenu.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1801242876/squaredmenu.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1801242876/squaredmenu.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/23833415/squaredmenu.react-native-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/23833415/squaredmenu.react-native-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/848093017/squaredmenu.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/848093017/squaredmenu.react-native-svg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2048453765/squaredmenu.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/-2048453765/squaredmenu.react-native-vector-icons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1060185454/squaredmenu.react-native-webview.iml" filepath="$PROJECT_DIR$/.idea/modules/1060185454/squaredmenu.react-native-webview.iml" />
+    </modules>
+  </component>
+</project>

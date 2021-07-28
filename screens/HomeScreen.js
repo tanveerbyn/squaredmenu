@@ -34,6 +34,7 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
     }, [])
     
     useEffect(async () => {
+        
         var bodyFormData = new FormData();
         bodyFormData.append('user_id', user_id);
         bodyFormData.append('token', token);
@@ -70,6 +71,7 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
         ServiceConstant.set_notf_count(res.data.unread_count)
     }
 
+    
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView>
@@ -112,6 +114,7 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
                             </TouchableOpacity>
                         </View>
                     </ImageBackground>
+                   
                     {data ? <>
                         {data && data.map((item, idx) => {
                             return <RestaurantCard key={idx} name='Menu' navigation={navigation} data={item} />
