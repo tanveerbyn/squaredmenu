@@ -2371,6 +2371,7 @@ layout ucrop_view
 menu ucrop_menu_activity
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_notification
 mipmap icon
 plurals mtrl_badge_content_description
 raw amu_ballon_gx_prefix

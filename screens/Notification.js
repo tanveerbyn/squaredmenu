@@ -86,10 +86,7 @@ async function showAndroidNotification(msgtitle, msgbody, icon) {
         priority: "high",
         showWhen: true,
         importance: 'high',
-
-
-
-
+       
     });
 }
 

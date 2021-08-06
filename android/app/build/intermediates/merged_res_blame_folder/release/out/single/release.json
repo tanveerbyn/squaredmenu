@@ -56,6 +56,10 @@
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_banners_lands.png"
     },
     {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_notification.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-xxhdpi/ic_notification.png"
+    },
+    {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/raw_node_modules_cssselect_lib_procedure.json.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/generated/res/react/release/raw/node_modules_cssselect_lib_procedure.json"
     },
@@ -184,6 +188,10 @@
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/generated/res/react/release/raw/node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json"
     },
     {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_notification.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-xhdpi/ic_notification.png"
+    },
+    {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_onboarding_part3.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_onboarding_part3.png"
     },
@@ -230,6 +238,10 @@
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_notification.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-hdpi/ic_notification.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_onboarding_part2.png.flat",
@@ -326,6 +338,14 @@
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_flags_france.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_flags_france.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_notification.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-mdpi/ic_notification.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_notification.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/src/main/res/mipmap-xxxhdpi/ic_notification.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_onboarding_part4.png.flat",

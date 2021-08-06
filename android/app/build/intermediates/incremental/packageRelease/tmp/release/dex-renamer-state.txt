@@ -1,4 +1,4 @@
-#Wed Jul 28 17:20:04 IST 2021
+#Fri Aug 06 16:58:26 IST 2021
 base.0=/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
