@@ -49,6 +49,8 @@ import { ServiceConstant } from './ServiceConstant'
 import { strings } from '../locales/i18n';
 import LanguageChoice from '../components/LanguageChoice';
 import I18n from 'react-native-i18n';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 GoogleSignin.configure({
   webClientId: "955337206220-m86af8e49jddlbqllk3bo3gm2aqegho8.apps.googleusercontent.com",
@@ -69,8 +71,19 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
   const [loaded, setLoaded] = React.useState(false);
   const [userFacebookInfo, setUserFacebookInfo] = React.useState({});
   const [online, setonline] = useState(true)
+  const [showtuts, setGuide] = useState(true)
+  
+  useEffect(async()=> {
+    let res = await AsyncStorage.getItem('logtuts')
+    let result= JSON.parse(res)
+    console.log('ressss-----------', res)
+    if(result == false) {
+      setGuide(false)
+    }
+  },[])
 
-  useEffect(() => {
+  useEffect(async() => {
+   
     console.log('from login -', ServiceConstant.get_fcm_Token())
     // Subscribe
     const unsubscribe = NetInfo.addEventListener(state => {
@@ -332,7 +345,14 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
     AlertIOS.alert(text);
 
   };
+
+  const handle_guide =  (res) => {
+     setGuide(false)
+     AsyncStorage.setItem('logtuts', JSON.stringify(false))
+  }
+
   return (
+   
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
         {/* <Bg1
@@ -346,6 +366,16 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
 
 
       /> */}
+      {
+          showtuts
+            ?
+            <TouchableOpacity activeOpacity={1} onPress={()=>handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+              <Image source={require('../assets/images/tutorial_images/DemoLanguage.png')} style={{ width: '100%', height: '100%', }} />
+            </TouchableOpacity>
+            :
+            null
+      }
+       
         <Image source={require('../assets/images/banners/addABuisness.png')} style={styles.banner} />
 
         <View style={styles.topElements}>
@@ -462,6 +492,7 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
       >
         <LanguageChoice closeFunc={()=>languageRBSheet.current.close()}/>
     </RBSheet>
+    
     </SafeAreaView>
   );
 };

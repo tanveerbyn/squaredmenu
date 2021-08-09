@@ -12,6 +12,7 @@ import NetInfo from "@react-native-community/netinfo";
 import Offline from '../components/Offline';
 import axios from 'axios';
 import {ServiceConstant} from './ServiceConstant';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //import Offline from '../components/Offline'
 import { strings } from '../locales/i18n'
@@ -19,7 +20,25 @@ import { strings } from '../locales/i18n'
 const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants }) => {
     const [data, setdata] = useState(null)
     const [online, setonline] = useState(true)
-   
+    const [showtuts, setGuide] = useState(true)
+    const [profile, setProfile] = useState(false)
+
+    useEffect(async()=> {
+        let res = await AsyncStorage.getItem('addbustuts')
+        let result= JSON.parse(res)    
+        if(result == false) {
+          setGuide(false)
+        }
+      },[])
+
+      useEffect(async()=> {
+        let res = await AsyncStorage.getItem('profiletuts')
+        let result= JSON.parse(res)
+        if(result == false) {
+          setProfile(false)
+        }
+      },[]) 
+
     useEffect(() => {
          // Subscribe
         const unsubscribe = NetInfo.addEventListener(state => {
@@ -71,9 +90,40 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
         ServiceConstant.set_notf_count(res.data.unread_count)
     }
 
+    const handle_guide =  (res) => {
+        setGuide(false)
+        setProfile(true)
+        AsyncStorage.setItem('addbustuts', JSON.stringify(false))
+     }
+
+     const handle_guide1 =  (res) => {   
+        setProfile(false)  
+        AsyncStorage.setItem('profiletuts', JSON.stringify(false))
+     }
     
     return (
         <SafeAreaView style={{ flex: 1 }}>
+            {
+                showtuts
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/DemoAddBusiness.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
+
+            {
+                profile
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/DemoGotoprofile.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
+
+
             <ScrollView>
                 <View>
                     <ImageBackground source={require('../assets/images/banners/lands.png')} style={styles.banner} resizeMode="stretch">

@@ -10,10 +10,23 @@ import DraggableFlatList, {
     RenderItemParams,
 } from "react-native-draggable-flatlist";
 import { strings } from '../locales/i18n'
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) => {
     const [data, setdata] = useState(null)
     const [dataItems, setDataItems] = useState([])
+    const [showtuts, setGuide] = useState(true)
+    const [profile, setProfile] = useState(false)
+
+    useEffect(async()=> {
+        let res = await AsyncStorage.getItem('qrtuts')
+        let result= JSON.parse(res)    
+        if(result == false) {
+          setGuide(false)
+        }
+      },[])
+
     useEffect(async () => {
         var bodyFormData = new FormData();
         bodyFormData.append('user_id', user_id);
@@ -23,6 +36,7 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
         setdata(res.data.data)
         setDataItems(res.data.data.menu)
     }, [])
+
     useEffect(() => {
         const unsubscribe = navigation.addListener('focus', async () => {
             var bodyFormData = new FormData();
@@ -55,9 +69,25 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
         },
         []
     );
+
+    const handle_guide =  (res) => {
+        setGuide(false)
+        AsyncStorage.setItem('qrtuts', JSON.stringify(false))
+     }
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
+            
             <SafeAreaView style={{ flex: 1 }}>
+            {
+                showtuts
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/Demogenerate.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
                 <DraggableFlatList
                     nestedScrollEnabled
                     data={dataItems}

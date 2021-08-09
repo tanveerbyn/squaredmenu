@@ -12,6 +12,7 @@ import DraggableFlatList, {
     RenderItemParams,
 } from "react-native-draggable-flatlist";
 import { strings } from '../locales/i18n'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemOrder }) => {
     const refRBSheet = useRef();
@@ -20,6 +21,16 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
     const [dataItems, setDataItems] = useState([])
     const [currency, setCurrency] = useState('$')
     const [updateFlatlist, setUpdateFlatlist] = useState(1)
+    const [showtuts, setGuide] = useState(true)
+
+    useEffect(async()=> {
+        let res = await AsyncStorage.getItem('additemtuts')
+        let result= JSON.parse(res)    
+        if(result == false) {
+          setGuide(false)
+        }
+      },[])
+
     useEffect(async () => {
         var bodyFormData = new FormData();
         bodyFormData.append('user_id', user_id);
@@ -83,6 +94,12 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
         bodyFormData.append('item_ids', new_order.toString());
         const res = await updateItemOrder(bodyFormData)
     }
+
+    const handle_guide =  (res) => {
+        setGuide(false)
+        AsyncStorage.setItem('additemtuts', JSON.stringify(false))
+     }
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             {/* {   
@@ -90,6 +107,16 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                         return <MenuSection key={idx} refresh={()=>refresh()} currency={data1.menu.currency} menuName={menu.name} variants={menu.variants} menu_id={route.params.menu_id} data={menu} successClose={()=>{close1andRefresh()}} addNew={() => refRBSheet2.current.open()} navigation={navigation}/>
                     })
                 } */}
+
+            {
+                showtuts
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/Demoadditem.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
             <SafeAreaView style={{ flex: 1 }}>
                 <DraggableFlatList
                     nestedScrollEnabled
