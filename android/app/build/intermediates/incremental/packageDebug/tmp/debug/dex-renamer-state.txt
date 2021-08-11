@@ -1,4 +1,4 @@
-#Mon Aug 09 12:25:11 IST 2021
+#Wed Aug 11 15:37:26 IST 2021
 base.10=/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_15.dex
 base.9=/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_14.dex
 base.8=/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_13.dex

@@ -1,4 +1,4 @@
-import React, {useContext, useState, useRef} from 'react';
+import React, {useContext, useState, useRef,useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -26,6 +26,8 @@ import RBSheet from "react-native-raw-bottom-sheet";
 import ImageChoice from '../components/ImageChoice';
 import { SafeAreaView } from 'react-native';
 import { strings } from '../locales/i18n';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const NewMenu = ({navigation, route, user_id, token, addMenu}) => {
   const refRBSheet = useRef();
@@ -35,6 +37,36 @@ const NewMenu = ({navigation, route, user_id, token, addMenu}) => {
   const [photo, onChangephoto] = React.useState(null);
   const [err, setErr] = React.useState("");
   const [clicked, setclicked] = React.useState(false);
+  const [showtuts, setGuide] = useState(true)
+  const [showtutss, setGuidee] = useState(false);
+
+  useEffect(async () => {
+    let res = await AsyncStorage.getItem('addimage')
+    let result = JSON.parse(res)
+    if (result == false) {
+      setGuide(false)
+    }
+  }, [])
+
+  useEffect(async () => {
+    let res = await AsyncStorage.getItem('inactive')
+    let result = JSON.parse(res)
+    if (result == false) {
+      setGuidee(false)
+    }
+  }, [])  
+
+const handle_guide =  (res) => {
+  setGuide(false)
+  setGuidee(true)
+  AsyncStorage.setItem('addimage', JSON.stringify(false))
+}
+
+const handle_guide1 =  (res) => {
+  setGuidee(false)
+  AsyncStorage.setItem('inactive', JSON.stringify(false))
+}
+
   const imagepick = () => {
     ImagePicker.openPicker({
       width: 375,
@@ -106,9 +138,34 @@ const handleSubmit = async () => {
     }
 }
   return (
-    <SafeAreaView>
-    <ScrollView>
+    <SafeAreaView style={{flex:1}}>
+      
+      {
+        showtuts
+          ?
+          <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+            <Image source={require('../assets/images/tutorial_images/Demoaddimage.png')} style={{ width: '100%', height: '100%', marginTop: 50 }} />
+          </TouchableOpacity>
+          :
+          null
+      }
+
+      {
+        showtutss
+          ?
+          <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+            <Image source={require('../assets/images/tutorial_images/inactive.png')} style={{ width: '100%', height: '100%', }} />
+          </TouchableOpacity>
+          :
+          null
+      }
+     
+    <ScrollView  >
+    
+        
+       
         <TouchableOpacity onPress={() => refRBSheet.current.open()} >
+        
         {!photo?<Image
         source={require('../assets/images/banners/imageUpload.png')}
          
@@ -116,7 +173,7 @@ const handleSubmit = async () => {
           // marginTop={-4}
           resizeMode="contain"
         />:<Image source={{uri:`data:${photo.mime};base64,${photo.data}`}} style={styles.altImage} resizeMode="cover" />}
-      
+     
 
       <View style={styles.topElements}>
         <TouchableOpacity
@@ -127,7 +184,7 @@ const handleSubmit = async () => {
             style={styles.button_image}
           />
         </TouchableOpacity>
-
+       
         {/* <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('RegistrationScreen')}>
@@ -251,6 +308,7 @@ const styles = StyleSheet.create({
   button: {},
   topElements: {
     position: 'absolute',
+   
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

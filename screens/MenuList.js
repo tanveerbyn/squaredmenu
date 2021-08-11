@@ -22,6 +22,8 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
     const [currency, setCurrency] = useState('$')
     const [updateFlatlist, setUpdateFlatlist] = useState(1)
     const [showtuts, setGuide] = useState(true)
+    const [showtutss, setGuidee] = useState(false)
+    const [showtut, setGuid] = useState(false)
 
     useEffect(async()=> {
         let res = await AsyncStorage.getItem('additemtuts')
@@ -30,6 +32,16 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
           setGuide(false)
         }
       },[])
+
+    useEffect(async () => {
+        let res = await AsyncStorage.getItem('preview')
+        let result = JSON.parse(res)
+        if (result == false) {
+            setGuidee(false)
+        }
+    }, [])  
+
+   
 
     useEffect(async () => {
         var bodyFormData = new FormData();
@@ -97,8 +109,33 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
 
     const handle_guide =  (res) => {
         setGuide(false)
+        setGuidee(true)
         AsyncStorage.setItem('additemtuts', JSON.stringify(false))
      }
+    
+     const handle_guide1 =  (res) => {
+        setGuidee(false)
+        AsyncStorage.setItem('preview', JSON.stringify(false))
+     }
+
+     const handle_guide2 =  (res) => {  
+        setGuid(false)    
+        AsyncStorage.setItem('variant', JSON.stringify(true))
+        refRBSheet.current.open()
+     }
+
+     const opensheet = async () => {
+        let res = await AsyncStorage.getItem('variant')
+        console.log('variant res', res)
+        let result = JSON.parse(res)
+         if(result == true) {
+            refRBSheet.current.open()
+         }
+         else {
+            setGuid(true)
+         }
+     }
+ 
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -117,6 +154,27 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                     :
                     null
             }
+
+            {
+                showtutss
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/Demopreview.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
+
+            {
+                showtut
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide2()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                        <Image source={require('../assets/images/tutorial_images/Demovariants.png')} style={{ width: '100%', height: '100%', }} />
+                    </TouchableOpacity>
+                    :
+                    null
+            }
+           
             <SafeAreaView style={{ flex: 1 }}>
                 <DraggableFlatList
                     nestedScrollEnabled
@@ -151,10 +209,16 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                         </>
                     }}
                     ListFooterComponent={() => {
-                        return <TouchableOpacity style={styles.newSection} onPress={() => refRBSheet.current.open()}>
-                            <Text style={styles.sectionName}>{strings('Add Item1')}</Text>
-                            <Image style={styles.plus} source={require('../assets/images/icons/plus.png')} />
-                        </TouchableOpacity>
+                        return (
+                            <>
+                            
+                                <TouchableOpacity style={styles.newSection} onPress={() =>  opensheet()}>
+                                    <Text style={styles.sectionName}>{strings('Add Item1')}</Text>
+                                    <Image style={styles.plus} source={require('../assets/images/icons/plus.png')} />
+                                </TouchableOpacity>
+                            </>
+                        )
+                        
                     }}
                 />
             </SafeAreaView>
@@ -180,6 +244,7 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                     }
                 }}
             >
+                
                 <AddNewItem closeFunc={() => refRBSheet.current.close()} currency={data1 && data1.menu.currency} menu_id={route.params.menu_id} navigation={navigation} />
             </RBSheet>
             <RBSheet

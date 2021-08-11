@@ -18,6 +18,7 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
     const [dataItems, setDataItems] = useState([])
     const [showtuts, setGuide] = useState(true)
     const [profile, setProfile] = useState(false)
+    const [profile1, setProfile1] = useState(false)
 
     useEffect(async()=> {
         let res = await AsyncStorage.getItem('qrtuts')
@@ -26,6 +27,22 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
           setGuide(false)
         }
       },[])
+
+    useEffect(async () => {
+        let res = await AsyncStorage.getItem('edit')
+        let result = JSON.parse(res)
+        if (result == false) {
+            setProfile(false)
+        }
+    }, []) 
+    
+    useEffect(async () => {
+        let res = await AsyncStorage.getItem('drag')
+        let result = JSON.parse(res)
+        if (result == false) {
+            setProfile(false)
+        }
+    }, [])  
 
     useEffect(async () => {
         var bodyFormData = new FormData();
@@ -70,10 +87,22 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
         []
     );
 
-    const handle_guide =  (res) => {
+    const handle_guide = (res) => {
         setGuide(false)
+        setProfile(true)
         AsyncStorage.setItem('qrtuts', JSON.stringify(false))
-     }
+    }
+    
+    const handle_guide1 = (res) => {
+        setProfile(false)
+        setProfile1(true)
+        AsyncStorage.setItem('edit', JSON.stringify(false))
+    } 
+
+    const handle_guide2 = (res) => {
+        setProfile1(false)
+        AsyncStorage.setItem('drag', JSON.stringify(false))
+    } 
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -88,6 +117,26 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
                     :
                     null
             }
+
+                {
+                    profile
+                        ?
+                        <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                            <Image source={require('../assets/images/tutorial_images/Demodragposition.png')} style={{ width: '100%', height: '100%', }} />
+                        </TouchableOpacity>
+                        :
+                        null
+                }
+
+                {
+                    profile1
+                        ?
+                        <TouchableOpacity activeOpacity={1} onPress={() => handle_guide2()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
+                            <Image source={require('../assets/images/tutorial_images/DemoEdititem.png')} style={{ width: '100%', height: '100%', }} />
+                        </TouchableOpacity>
+                        :
+                        null
+                }
                 <DraggableFlatList
                     nestedScrollEnabled
                     data={dataItems}

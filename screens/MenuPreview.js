@@ -13,7 +13,7 @@ import { strings } from '../locales/i18n'
 
 const MenuPreview = ({navigation, route}) => {
     const [loading, setloading] = useState(true)
-    const refRBSheet = useRef();
+    
     console.log(route.params.themeURL)
     return (
         <SafeAreaView style={{backgroundColor:'#fff', flex:1, overflow:'hidden'}}>
