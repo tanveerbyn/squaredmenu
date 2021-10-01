@@ -68,7 +68,7 @@ const EditMenu = ({navigation, route, user_id, token, editMenu, deleteMenu}) => 
   }
   const handleSubmit = async () => {
     if(menu.trim().length < 1){
-      setErr("Enter Valid Menu Name")
+      setErr(strings('valid_menu'))
       return
     }
     // else if(note.trim().length < 1){
@@ -115,10 +115,13 @@ const EditMenu = ({navigation, route, user_id, token, editMenu, deleteMenu}) => 
     bodyFormData.append('user_id', user_id);
     bodyFormData.append('token', token);
     bodyFormData.append('menu_id', route.params.data.menu_id);
-
     const res = await deleteMenu(bodyFormData)
-
+    console.log('Edit Menu File', res.data.message)
     navigation.goBack()
+    if(res.data.status == false) {
+     alert(res.data.message)
+    }
+    
   }
   const createTwoButtonAlert = () =>
         Alert.alert(
@@ -174,6 +177,9 @@ const EditMenu = ({navigation, route, user_id, token, editMenu, deleteMenu}) => 
           />
         </TouchableOpacity> */}
       </View>
+
+
+      
       </TouchableOpacity>
       <View style={styles.inputFields}>
 {err && <Text style={{textAlign:'center', color:'red', fontFamily: 'Poppins Bold'}}>{err}</Text>}
@@ -186,7 +192,7 @@ const EditMenu = ({navigation, route, user_id, token, editMenu, deleteMenu}) => 
             width={wp(100)}
             multiline={true}
             placeholder={strings('Add Menu Section1')}
-            opacity={0.45}
+            opacity={0.80}
             placeholderTextColor="#000000"
           />
           <TouchableOpacity onPress={()=>createTwoButtonAlert()} style={{position:'absolute', right: 5, backgroundColor:'#fff', padding: 10, borderRadius: 8, elevation: 5}}><Image source={require('../assets/images/icons/delete.png')} style={{width: 18.5, height: 20}}/></TouchableOpacity>

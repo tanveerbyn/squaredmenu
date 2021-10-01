@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Volumes/CTIPL/CT_INDIA/ReactNative/squaredmenu/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/coretechies/.gradle/caches/transforms-2/files-2.1/53ad2a41fe4d81369a67c4a61cf83504/material-1.1.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\coretechies\\.gradle\\caches\\transforms-2\\files-2.1\\53ad2a41fe4d81369a67c4a61cf83504\\material-1.1.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

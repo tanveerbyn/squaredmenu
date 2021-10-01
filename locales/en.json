@@ -7,7 +7,7 @@
         },
         "part2":{
             "heading": "Add sections and Items",
-            "description": "Now add sections (e.g. Breakfast, Hot Drinks, Burgers, Pizzas,...). Each section contains items (i.e. your food/drink or product). Each item can have a single price or different price (varient) (e.g. cake: small, medium, large)."
+            "description": "Now add sections (e.g. Breakfast, Hot Drinks, Burgers, Pizzas,...). Each section contains items (i.e. your food/drink or product). Each item can have a single price or different price (Variant) (e.g. cake: small, medium, large)."
         },
         "part3":{
             "heading": "Show allergens and dietary restrictions",
@@ -104,7 +104,7 @@
     "QR Code Screen3": "Tap to view printable version",
     "QR Code Screen4": "Copy URL",
     "QR Code Screen5": "Get the printable PDF",
-    "Alert1": "Great! We have sent the QR code on email",
+    "Alert1": "Great! We have sent the QR code on your email",
     "Change Language": "Change Language",
     "Choose a Language": "Choose a Language",
     "Move the map for location":"Move the map for location",
@@ -121,8 +121,41 @@
     "Generating":"Generating",
     "Share the app with your friends":"Share the app with your friends",
     "Open Menu":"Open Menu",
-    "Logout":"Logout"
-
-
+    "Logout":"Logout",
+    "enter_reg" : "Enter your registered email address and we will reset your password",
+    "reg_using" : "or register using",
+    "policy" : "Policy",
+    "and" : "and",
+    "tac" : "T&C",
+    "valid_menu" : "Enter Valid Menu Name",
+    "valid_busname": "Enter Valid Name",
+    "Thank You" : "Thank You",
+    "You have successfully registered with SquaredMenu" : " You have successfully registered with SquaredMenu",
+    "Verify_account" : "Verify your account with a link sent to your registered email address.",
+    "login_now" : "Login Now",
+    "resend_link" : "Resend Verification Link",
+    "enter_name" : "Enter Name",
+    "enter_email" : "Enter Email",
+    "enter_pass" : "Enter Password",
+    "enterconf_pass" : "Password does not match.",
+    "strong_pass" : "Please choose a stronger password, e.g. John@123, Smith$456",
+    "enter_contact" : "Enter Contact Number",
+    "valid_bussname" : "Enter Valid Address",
+    "addmenu_item1" : "Please enter Name",
+    "addmenu_item2" : "Please enter Price",
+    "valid_currency" : "Enter Valid Currency",
+    "add_newvariant1" : "Enter Valid Variant Name",
+    "add_newvariant2" : "Enter Valid Price",
+    "one_variant" : "Enter atleast one varient.",
+    "valid_itemname": "Enter Valid Item Name",
+    "Edit Price" : "Edit Price",
+    "Old Password" : "Old Password",
+    "New Password" : "New Password",
+    "Confirm New Password" : "Confirm New Password",
+    "Update" : "Update",
+    "newwpass1" : "New Password & Confirm Password should be same.",
+    "sizes" : "ex. small medium large",
+    "valid_forgetpass" : "Please enter a valid Email / Phone",
+    "Item Name": "Item Name"
     
 }

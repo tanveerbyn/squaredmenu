@@ -3,9 +3,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import FastImage from 'react-native-fast-image'
 import { widthPercentageToDP } from 'react-native-responsive-screen'
 
-const RestaurantCard = ({navigation, name, data}) => {
+const RestaurantCard = ({navigation, name, data, disable}) => {
     return (
-        <TouchableOpacity style={styles.card} onPress={()=>navigation.navigate(name,{restaurant_id:data.restaurant_id, brandImage:data.cover, themeURL: data.theme_url, public_url: data.public_url})}>
+        <TouchableOpacity disabled={disable} style={styles.card} onPress={()=>navigation.navigate(name,{restaurant_id:data.restaurant_id, brandImage:data.cover, themeURL: data.theme_url, public_url: data.public_url})}>
             <View style={styles.subBox}>
                 <FastImage
                     style={styles.thumbnail}

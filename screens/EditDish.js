@@ -167,13 +167,13 @@ const EditDish = ({ navigation, route, getItemDetail, user_id, token, addNewItem
     }
     const handleSubmit = async () => {
         if (name.trim().length < 1) {
-            seterr("Enter Valid Item Name")
+            seterr(strings('valid_itemname'))
             return
             // }else if(desc.trim().length < 1){
             //     seterr("Enter Valid Description")
             //     return
         } else if (has_variants === 1 && variants.length < 1) {
-            seterr("Enter atleast one varient.")
+            seterr(strings('one_variant'))
             return
         } else {
             seterr("")
@@ -258,7 +258,7 @@ const EditDish = ({ navigation, route, getItemDetail, user_id, token, addNewItem
                                 value={name}
                                 width={widthPercentageToDP(60)}
                                 multiline={true}
-                                placeholder="Item Name"
+                                placeholder={strings('Item Name')}
                                 opacity={0.9}
                                 placeholderTextColor="#00000090"
                             />
@@ -314,7 +314,7 @@ const EditDish = ({ navigation, route, getItemDetail, user_id, token, addNewItem
                     <View style={styles.optionContainer}>
                         {options.map((item) => {
                             console.log(item)
-                            return <OptionComponentEdit key={item.option_id} image={item.image} option_id={item.option_id} name={item.name} selectThisOption={(id) => selectThisOption(id)} deselectThisOption={(id) => deselectThisOption(id)} is_checked={item.is_checked} />
+                            return <OptionComponentEdit key={item.option_id} image={item.image} black_image={item.image_black} option_id={item.option_id} name={item.name} selectThisOption={(id) => selectThisOption(id)} deselectThisOption={(id) => deselectThisOption(id)} is_checked={item.is_checked} />
                         })}
                     </View>
                     <View style={styles.line}></View>

@@ -26,7 +26,7 @@ import { ToastAndroid } from 'react-native';
 
 import ImagePicker from 'react-native-image-crop-picker';
 import { Alert } from 'react-native';
-
+import {strings} from '../locales/i18n'
 
 const EditProfile = ({ navigation, changePassword, name, user_id, token, updateProfilePic }) => {
   const [old, onChangeOld] = React.useState("");
@@ -49,7 +49,7 @@ const EditProfile = ({ navigation, changePassword, name, user_id, token, updateP
 
   const handleSubmit = async () => {
     if(confirm !== newpassword){
-      seterr("New Password & Confirm Password should be same.")
+      seterr(strings("newwpass1"))
       return
     }
     var bodyFormData = new FormData();
@@ -185,18 +185,18 @@ const EditProfile = ({ navigation, changePassword, name, user_id, token, updateP
         <View style={{position:'relative'}}>
           <TextInput
             style={styles.input}
-            fontSize={15}
+            fontSize={13}
             onChangeText={onChangeOld}
             value={old}
             fontFamily="Poppins Regular"
-            placeholder="Old Password"
+            placeholder={strings("Old Password")}
             textAlign="center"
             placeholderTextColor="#635CC9"
             secureTextEntry={showPassword1}
           />
           <Icon style={styles.showicon}
               name={iceye1}
-              size={26}
+              size={23}
               color='#635CC9'
               onPress={()=>changePwdType(1)}
           />
@@ -204,37 +204,37 @@ const EditProfile = ({ navigation, changePassword, name, user_id, token, updateP
         <View style={{position:'relative'}}>
           <TextInput
             style={styles.input}
-            fontSize={15}
+            fontSize={13}
             fontFamily="Poppins Regular"
             onChangeText={onChangeNewPassword}
             value={newpassword}
-            placeholder="New Password"
+            placeholder={strings("New Password")}
             textAlign="center"
             placeholderTextColor="#635CC9"
             secureTextEntry={showPassword2}
           />
           <Icon style={styles.showicon}
               name={iceye2}
-              size={26}
+              size={23}
               color='#635CC9'
               onPress={()=>changePwdType(2)}
           />
         </View>
         <View style={{position:'relative'}}>
           <TextInput
-            style={styles.input}
-            fontSize={15}
+            style={{...styles.input, paddingHorizontal:20,}}
+            fontSize={13}
             fontFamily="Poppins Regular"
             onChangeText={onChangeConfirm}
             value={confirm}
-            placeholder="Confirm New Password"
+            placeholder={strings("Confirm New Password")}
             textAlign="center"
             placeholderTextColor="#635CC9"
             secureTextEntry={showPassword3}
           />
           <Icon style={styles.showicon}
               name={iceye3}
-              size={26}
+              size={23}
               color='#635CC9'
               onPress={()=>changePwdType(3)}
           />
@@ -245,7 +245,7 @@ const EditProfile = ({ navigation, changePassword, name, user_id, token, updateP
 
         <Button
           onPress={handleSubmit}
-          title="Update"
+          title={strings("Update")}
           titleStyle={{ fontSize: 15 }}
           buttonStyle={styles.btn1}
           containerStyle={{ marginTop: 40 }}
@@ -411,16 +411,16 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     marginVertical: 5,
-    marginHorizontal: 15,
+    marginHorizontal: 8,
     borderWidth: 1,
     borderRadius: 25,
-    fontSize: 15,
+    fontSize: 13,
     backgroundColor: "#E7E6F3",
     borderColor: "#E7E6F3",
   },
   showicon: {
     position: 'absolute',
     top: 16,
-    right: 35
+    right: 20
   },
 });

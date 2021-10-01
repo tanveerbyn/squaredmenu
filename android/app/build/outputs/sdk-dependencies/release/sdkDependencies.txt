@@ -495,17 +495,17 @@ library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-bom"
-    version: "28.2.1"
+    version: "28.4.1"
   }
 }
 library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-analytics"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\022K\242\204\377e\3204\250\037\261N\370\335/\300\036\266\335[AX_F\'\304\255\241\004\317&\354"
+    sha256: "\224\2658\377\255\270\220\343\311\324\330\205\254Y\035\342\026\234Gd\376\033E\005\364\t\364\241\356\342\342\335"
   }
 }
 library {
@@ -532,20 +532,20 @@ library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-crashlytics"
-    version: "18.1.0"
+    version: "18.2.1"
   }
   digests {
-    sha256: "(\313H\017\314\037\214\305\'\226\035\221\003\026\333\372\020\371\257)\207^\254Do\320aqd\350\f?"
+    sha256: "/_\311p\221\034\017\\\033\315Rj\251\362\246\201\337s\365^\273;\017QU\243\366\317\364\331\377\325"
   }
 }
 library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-crashlytics-ndk"
-    version: "18.1.0"
+    version: "18.2.1"
   }
   digests {
-    sha256: "D\262\265\310\372m|p\314\332\030}s\364\300\365\361\235]D\204\335o\323\313_\341\245\341\243\t\260"
+    sha256: "58\266\254\000xx\205b\034\005-\267=x\321\312P\225\ap\243\241W\016\022\271?$\032l\n"
   }
 }
 library {
@@ -572,30 +572,30 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\366\357\004\357/>\316\325\310\360\0224\266\0262\346\256h\303\v-\002\330\263\336\272\tj\002\361\273\224"
+    sha256: "?[\200\217\373>5a\307\3136\241\\\240\020\330\016g\231,\251\316\274[_ \271\243\245\236\374\034"
   }
 }
 library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-api"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\215\253\320\207\223\256\274|\205\f\347S\004\270r\217t2\202q\276o7l\2030\336\320\226Z\340\253"
+    sha256: "\234rZ\361#\362\004\"\3642\310\312H\254\200\304\373\214]\306\266\364\226\3622Tq*\203\033m\207"
   }
 }
 library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-sdk"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\275<\vgj\226\306\253\212\022\320Xy\326\375\006\\\373\022\223\326\204\207\210\332\334\024}a{lc"
+    sha256: "\336)\306\263\2068\273`\354\323\022\326`\025O\252\202\000,\035K\224\356T\302\373\260\2648\217<\213"
   }
 }
 library {
@@ -622,30 +622,30 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-basement"
-    version: "17.1.1"
+    version: "17.5.0"
   }
   digests {
-    sha256: "\205\343\327\317\261\024^\271\232\002\240\021pF\355\347\262IAE?\362\001\211\003\2560v\240\037\210\304"
+    sha256: "6#\001\300\332\034v\\\273\334\370\352\206kl\266+\3010\310m*\247\314\236\234\030\246\345\036\247\235"
   }
 }
 library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-base"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\337\353\244\024\2714\265\2059\261X\023\372\250O\021N\370\311;\237]\211\024P(\003\245\347\'Ja"
+    sha256: "\322\362\375\021\257\b\216\317\3022J\344\025\3571f\310\f\375\260\353N\312Y 3?\3530\374\256\376"
   }
 }
 library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-impl"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "\021h\260l\333@\352>\256u\250BcF\322\370L\335\220\037\365\006k\372\f\b\a]\342\243C\005"
+    sha256: ">Y\355\037?\264\237\256k\\\243\314t\231\r;\2424\322\371\253\251\266\243\346\263-\357\325\\\325q"
   }
 }
 library {
@@ -692,20 +692,20 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-sdk-api"
-    version: "19.0.0"
+    version: "19.0.1"
   }
   digests {
-    sha256: "M\266\234\213p\206\016\305\017`\31654\317N\374\370\024\377oy\254\231\202\276G\275)\365\3312\375"
+    sha256: "\244\221\225g\223M\323\227\245e\350\230\001{dy\252\222\v5\020\364(\206m\215\263n\313\2214\252"
   }
 }
 library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-tasks"
-    version: "17.0.0"
+    version: "17.2.0"
   }
   digests {
-    sha256: ".m\0278\2676G\363\376z\003\213\227\200\271w\027\263tn\256%\200\t\031~6\347\2771\022\245"
+    sha256: "\2411\321&\024]\376\207\336\004\372\220O\234\351\027S\262\323\'8Q\267\320\204fjq%W\222\250"
   }
 }
 library {
@@ -772,10 +772,10 @@ library {
   maven_library {
     groupId: "com.google.android.datatransport"
     artifactId: "transport-runtime"
-    version: "3.0.1"
+    version: "3.0.0"
   }
   digests {
-    sha256: "\260!\351\0259\213\225\376\236QY\302\231\030\034\377\250w\2226\023n\212g-\320\306\326p\304\201\235"
+    sha256: "i\033\326\356+\3711\202\322\234\270\243\246\3675\t\2037\346\363]\177\311\310\247\237\027\375\256`H\224"
   }
 }
 library {
@@ -872,10 +872,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-auth"
-    version: "19.0.0"
+    version: "19.2.0"
   }
   digests {
-    sha256: "i\215z\266L\250\257\367?g\211\235\312\321;\240\361\217\253\037\351\213\343\026\'\215\211\214I\250\213\t"
+    sha256: "\'\v\202W\200\200\326\260\312\205\037\234\3624\005q\237\362\330XoCeBk\277\tHW\324~\330"
   }
 }
 library {
@@ -902,10 +902,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-base"
-    version: "17.1.0"
+    version: "17.5.0"
   }
   digests {
-    sha256: "\360*\310\305f\033\027\b\310\n\"\325\025\27102H\235A/\340+Y\251|\004\344\270\r\032}\276"
+    sha256: "\031\214\236!\025\365\316_\221\024\f\331\264\201\334md\335cJ\302\326\306RUg\334_\340\000e\313"
   }
 }
 library {
@@ -922,17 +922,17 @@ library {
   maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "glide"
-    version: "4.11.0"
+    version: "4.12.0"
   }
   digests {
-    sha256: "\\)Nj_\017\201,\357\207k\204\022\225L\030\"\332\030J\363\216\b*[vn<OO\315\225"
+    sha256: "j\342\224J\333b\227\177\345?B\304\370j\"\2752l\030(\266\223D\034\314\3440\351/\024\203\204"
   }
 }
 library {
   maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "gifdecoder"
-    version: "4.11.0"
+    version: "4.12.0"
   }
   digests {
     sha256: "\031z\034\325\267hU\252\002\2620\3019t\342\223\"\233\220\035\302\271o\253C\025 \036x\272\250\004"
@@ -942,40 +942,40 @@ library {
   maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "disklrucache"
-    version: "4.11.0"
+    version: "4.12.0"
   }
   digests {
-    sha256: "\320gu\245\027\033wz\243\333\003\036\260\335J\035\276?\000\335\243[Ut\337\331S\366\260\325\357\030"
+    sha256: "o\f\311\006\226F\254X.\347\215\277b\036\2200>\242\000\271\316A\302\n\303h\351%\355Ecy"
   }
 }
 library {
   maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "annotations"
-    version: "4.11.0"
+    version: "4.12.0"
   }
   digests {
-    sha256: "\322\031\3228\000m\202Ib\027b)\324p\212\274\335\334\3764,j\030\245\320\372H\326\360G\233>"
+    sha256: "\372C\f\277\217\223\037\315\211\303\201\225\253UD\357Mb\310\254l.oI\370\364\256x`\372\336\216"
   }
 }
 library {
   maven_library {
     groupId: "androidx.exifinterface"
     artifactId: "exifinterface"
-    version: "1.1.0-beta01"
+    version: "1.2.0"
   }
   digests {
-    sha256: "\374\230)\3178\033\354\307\370\215.H\341h\v\005h\f%d\203n&k\316\276\340\214\002\315\231\234"
+    sha256: "\252\346\216Q0\225\344u\247g\005V\352\313\247r\354+\265\222\321q\207\t\025x\323\376\371G\256\247"
   }
 }
 library {
   maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "okhttp3-integration"
-    version: "4.11.0"
+    version: "4.12.0"
   }
   digests {
-    sha256: ">pB\310\365O\250V\255\003\027\201U\033K]A\362\215\346O\331\n`;\211\301\217 6\037\002"
+    sha256: "\rr.\364\332\227\037=\t\352\a5\035\323\251\377s\017\261{C\213\035MtO\232(\246\315\326 "
   }
 }
 library {
@@ -1276,6 +1276,16 @@ library {
   }
   digests {
     sha256: "\351\\\0001\324\314$|\324\201\226\306(~X\322\316\345M\234y\270Z\376\247\311\t 3\002u\257"
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.webkit"
+    artifactId: "webkit"
+    version: "1.4.0"
+  }
+  digests {
+    sha256: "\032\021\262\n\254\023R\336r\332Sf\267f\202\316\213\246\271\260\276\361jv\273=\364\032\235\270\221\227"
   }
 }
 library {
@@ -2011,12 +2021,17 @@ library_dependencies {
 }
 library_dependencies {
   library_index: 128
+  library_dep_index: 14
+  library_dep_index: 15
+}
+library_dependencies {
+  library_index: 129
 }
 module_dependencies {
   module_name: "base"
   dependency_index: 0
-  dependency_index: 128
   dependency_index: 49
+  dependency_index: 129
   dependency_index: 50
   dependency_index: 5
 }

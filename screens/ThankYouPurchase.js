@@ -41,7 +41,7 @@ const ThankYouPurchase = ({navigation, beginUpdate}) => {
         </View>
 
       <View style={styles.heading}>
-        <Text style={styles.headingText}>Thank You </Text>
+        <Text style={styles.headingText}>{strings('Thank You')}  </Text>
         <Text style={styles.contentHeadingText}>
         You have successfully activated the trial version.
         </Text>

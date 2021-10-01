@@ -97,7 +97,7 @@ const handle_guide1 =  (res) => {
   }
 const handleSubmit = async () => {
     if(menu.trim().length < 1){
-        setErr("Enter Valid Menu Name")
+        setErr(strings('valid_menu'))
         return
     }
     // else if(!photo){
@@ -139,31 +139,105 @@ const handleSubmit = async () => {
 }
   return (
     <SafeAreaView style={{flex:1}}>
+     
+
       
-      {
+     
+    <ScrollView contentContainerStyle={{flexGrow:1}} >
+     
+    {
         showtuts
           ?
-          <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-            <Image source={require('../assets/images/tutorial_images/Demoaddimage.png')} style={{ width: '100%', height: '100%', marginTop: 50 }} />
+          <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+            <View >
+
+              {!photo ? <Image
+                source={require('../assets/images/banners/imageUpload.png')}
+
+                style={{ height: wp(100) * 418 / 750, width: wp(100) }}
+                // marginTop={-4}
+                resizeMode="contain"
+              /> : <Image source={{ uri: `data:${photo.mime};base64,${photo.data}` }} style={styles.altImage} resizeMode="cover" />}
+
+            </View>
+            <View style={{ alignItems: 'center', bottom: 30 }}>
+              <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Tap here to add an image to your section.</Text>
+            </View>
           </TouchableOpacity>
+
           :
           null
       }
-
-      {
+        
+        {
         showtutss
           ?
-          <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-            <Image source={require('../assets/images/tutorial_images/inactive.png')} style={{ width: '100%', height: '100%', }} />
+          <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide1()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+            
+            <View  >
+        
+        {!photo?<Image
+        source={require('../assets/images/banners/imageUpload.png')}
+         
+          style={{height:wp(100)*418/750, width: wp(100)}}
+          // marginTop={-4}
+          resizeMode="contain"
+        />:<Image source={{uri:`data:${photo.mime};base64,${photo.data}`}} style={styles.altImage} resizeMode="cover" />}
+     
+
+      <View style={styles.topElements}>
+       
+      </View>
+      </View>
+      <View style={styles.inputFields}>
+        <Text style={{textAlign:'center', color:'red', fontFamily: 'Poppins Bold'}}>{err}</Text>
+        <View style={styles.editMenu}>
+          <TextInput
+            fontSize={wp(11)}
+            editable={false}
+            fontFamily={'Poppins Medium'}
+            onChangeText={onChangeMenu}
+            value={menu}
+            width={wp(100)}
+            multiline={true}
+            placeholder={strings('Add Menu Section1')}
+            opacity={0.80}
+            placeholderTextColor="#000000"
+          />
+          {/* <Image source={require('../assets/images/icons/delete.png')} /> */}
+        </View>
+      
+                <View style={{ alignItems: 'flex-end',  marginHorizontal: 10 }}>
+                  <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Tap here to hide or show the entire section</Text>
+                  <Image source={require('../assets/images/tutorial_images/Arrowdown1.png')} style={{ width: 70, height: 60, resizeMode: 'contain', }} />
+                  
+                   
+                  
+                </View>   
+                
+          <View style={{alignItems: 'flex-end', marginTop:5, marginHorizontal:10}}>
+           
+            <ToggleSwitch
+              isOn={isOn}
+              onColor="#635CC9"
+              offColor="#635CC920"
+              labelStyle={{color: 'black', fontFamily: 'Poppins Medium'}}
+              size="medium"
+             
+            />
+          </View>
+          
+        
+              
+      </View>
+     
+             
+           
           </TouchableOpacity>
           :
           null
       }
-     
-    <ScrollView  >
-    
-        
-       
         <TouchableOpacity onPress={() => refRBSheet.current.open()} >
         
         {!photo?<Image
@@ -206,7 +280,7 @@ const handleSubmit = async () => {
             width={wp(100)}
             multiline={true}
             placeholder={strings('Add Menu Section1')}
-            opacity={0.45}
+            opacity={0.80}
             placeholderTextColor="#000000"
           />
           {/* <Image source={require('../assets/images/icons/delete.png')} /> */}

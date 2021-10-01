@@ -32,6 +32,8 @@ import {Picker} from '@react-native-picker/picker';
 import Geolocation from '@react-native-community/geolocation';
 import { ActivityIndicator } from 'react-native';
 import { strings } from '../locales/i18n';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrency }) => {
   const refRBSheet = useRef();
@@ -51,9 +53,20 @@ const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrenc
   const [denominations, setDenominations] = React.useState([]);
   const [searchText, setSearchText] = React.useState("");
   const [locationLoading, setLocationLoading] = React.useState(false);
+  const [showtuts, setGuide] = React.useState(true)
   useEffect(() => {
     getListOfCurrency()
+    
   }, [])
+
+  useEffect(async()=> {
+    let res = await AsyncStorage.getItem('addbusimage')
+    let result= JSON.parse(res)    
+    if(result == false) {
+      setGuide(false)
+    }
+  },[])
+
   const getListOfCurrency = async () => {
     var bodyFormData = new FormData();
     bodyFormData.append('user_id', user_id);
@@ -91,10 +104,10 @@ const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrenc
   }
   const handleSubmit = async () => {
     if(name.trim().length < 1){
-      setErr("Enter Valid Name")
+      setErr(strings('valid_busname'))
       return
     }else if(address.trim().length < 1){
-      setErr("Enter Valid Address")
+      setErr(strings('valid_bussname'))
       return
     }
     // else if(!photo){
@@ -102,7 +115,7 @@ const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrenc
     //   return
     // }
     else if(curr.trim().length < 1){
-      setErr("Enter Valid Currency")
+      setErr(strings('valid_currency'))
       return
     }
     // else if(!lat){
@@ -184,9 +197,14 @@ const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrenc
       );
     // }
   }
+
+  const handle_guide =  (res) => {
+    setGuide(false)
+    AsyncStorage.setItem('addbusimage', JSON.stringify(false))
+ }
   return (
     <SafeAreaView>
-      {step === 1 && <ScrollView>
+      {step === 1 && <ScrollView contentContainerStyle={{flexGrow:1}}>
         {/* <Bg1
           height={Platform.OS === 'ios'?hp('31'):hp('40')}
           width={wp('100%')}
@@ -217,6 +235,42 @@ const AddABusiness = ({ navigation, user_id, token, addNewRestaurant, getCurrenc
         <View style={styles.heading}>
           <Text style={styles.headingText}>Add Business</Text>
         </View>
+        
+        {
+          showtuts
+          ?
+            <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+
+              <Image source={require('../assets/images/banners/addABuisness.png')} style={styles.banner} />
+              <View style={styles.topElements}>
+                <TouchableOpacity style={styles.button} >
+                  <Image
+                    source={require('../assets/images/topbar/back.png')}
+                    style={styles.button_image}
+                  />
+                </TouchableOpacity>
+              
+              </View>
+
+              <View style={styles.heading}>
+                <Text style={styles.headingText}>Add Business</Text>
+              </View>
+              <View style={styles.inputFields}></View>
+              <TouchableOpacity style={styles.imageContainer}>
+                <Image
+                  source={!photo ? require("../assets/images/icons/imageicon.png") : { uri: `data:${photo.mime};base64,${photo.data}` }}
+                  style={styles.imageIcon}
+                />
+              </TouchableOpacity>
+              <View style={{ alignItems: 'center', top: 5 }}>
+                <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+                <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Here you can add an image of your business.</Text>
+              </View>
+            </TouchableOpacity>
+            :
+            null
+        }
+        
 
         <View style={styles.inputFields}>
 

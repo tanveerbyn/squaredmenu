@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import { widthPercentageToDP } from 'react-native-responsive-screen'
 
 
-const OptionComponent = ({name, option_id, selectThisOption, deselectThisOption, image}) => {
+const OptionComponent = ({name, option_id, selectThisOption, deselectThisOption, image, img_black}) => {
     const [active, setactive] = useState(false)
     const toggleActivity = () => {
         
@@ -19,7 +19,7 @@ const OptionComponent = ({name, option_id, selectThisOption, deselectThisOption,
     return (
         <TouchableOpacity style={active?styles.active:styles.inactive} onPress={toggleActivity}>
             {/* <Image style={styles.jar} source={active?require('../assets/images/icons/jar_white.png'):require('../assets/images/icons/jar.png')} /> */}
-            <Image style={styles.jar} source={{uri: image}} />
+            <Image style={styles.jar} source={{uri: active ? image : img_black}} />
             <Text style={active?styles.activeText:styles.inactiveText}>{name}</Text>
             {active && <Image style={styles.tick} source={require('../assets/images/icons/option_tick.png')} />}
         </TouchableOpacity>
@@ -55,19 +55,19 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     activeText: {
-        fontSize: 18,
+        fontSize: 13,
         fontFamily: 'Poppins Medium',
         color: '#fff'
     },
     inactiveText: {
-        fontSize: 18,
+        fontSize: 13,
         fontFamily: 'Poppins Medium',
         color: '#000',
         marginLeft: 10
     },
     jar:{
-        height: 18.95,
-        width: 15.83
+        height: 24,
+        width: 24
     },
     tick:{
         height: 13.7,

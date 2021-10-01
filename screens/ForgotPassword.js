@@ -28,7 +28,7 @@ const ForgotPassword = ({ navigation,forgotPassword }) => {
   const [err, seterr] = useState("")
   const initiateForgot = async () => {
     if(email.trim().length<1){
-      seterr("Please enter a valid Email / Phone")
+      seterr(strings('valid_forgetpass'))
       return
     }
     var bodyFormData = new FormData();
@@ -76,7 +76,7 @@ const ForgotPassword = ({ navigation,forgotPassword }) => {
         <Text style={styles.headingText}>{strings('Login Screen5')}</Text>
       </View>
       <View style={styles.inputFields}>
-        <Text style={styles.emailText}>Enter your registered email address and we will reset your password</Text>
+        <Text style={styles.emailText}>{strings('enter_reg')}</Text>
         <Text style={{textAlign:'center', color:'red', fontFamily: 'Poppins Bold'}}>{err}</Text>
         <TextInput
           style={styles.input}

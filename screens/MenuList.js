@@ -13,6 +13,7 @@ import DraggableFlatList, {
 } from "react-native-draggable-flatlist";
 import { strings } from '../locales/i18n'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import ToggleSwitch from 'toggle-switch-react-native'
 
 const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemOrder }) => {
     const refRBSheet = useRef();
@@ -23,7 +24,7 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
     const [updateFlatlist, setUpdateFlatlist] = useState(1)
     const [showtuts, setGuide] = useState(true)
     const [showtutss, setGuidee] = useState(false)
-    const [showtut, setGuid] = useState(false)
+    const [showtut, setGuid] = useState(true)
 
     useEffect(async()=> {
         let res = await AsyncStorage.getItem('additemtuts')
@@ -41,6 +42,13 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
         }
     }, [])  
 
+    useEffect(async () => {
+        let res = await AsyncStorage.getItem('variant')
+        let result = JSON.parse(res)
+        if (result == true) {
+            setGuid(false)
+        }
+    }, []) 
    
 
     useEffect(async () => {
@@ -121,61 +129,66 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
      const handle_guide2 =  (res) => {  
         setGuid(false)    
         AsyncStorage.setItem('variant', JSON.stringify(true))
-        refRBSheet.current.open()
+       
      }
 
      const opensheet = async () => {
-        let res = await AsyncStorage.getItem('variant')
-        console.log('variant res', res)
-        let result = JSON.parse(res)
-         if(result == true) {
-            refRBSheet.current.open()
-         }
-         else {
-            setGuid(true)
-         }
+        refRBSheet.current.open()
      }
  
 
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-            {/* {   
-                    data1 && data1.items.map((menu, idx) => {
-                        return <MenuSection key={idx} refresh={()=>refresh()} currency={data1.menu.currency} menuName={menu.name} variants={menu.variants} menu_id={route.params.menu_id} data={menu} successClose={()=>{close1andRefresh()}} addNew={() => refRBSheet2.current.open()} navigation={navigation}/>
-                    })
-                } */}
-
+        <SafeAreaView style={{ flex: 1 , }}>
+            
+            
+            <SafeAreaView style={{ flex: 1 }}>
+            
             {
                 showtuts
                     ?
-                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                        <Image source={require('../assets/images/tutorial_images/Demoadditem.png')} style={{ width: '100%', height: '100%', }} />
+                    <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide()}  style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            <View style={{ justifyContent: 'center',flex:1 }}>
+                                <View style={styles.newSection} >
+                                    <Text style={styles.sectionName}>{strings('Add Item1')}</Text>
+                                    <Image style={styles.plus} source={require('../assets/images/icons/plus.png')} />
+                                </View>
+                                <View style={{alignItems:'center', bottom:30}}>
+                                    <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+                                    <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Tap here to add items in your section.</Text>
+                                </View>
+                            </View>
                     </TouchableOpacity>
                     :
                     null
             }
 
-            {
+             {
                 showtutss
                     ?
-                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                        <Image source={require('../assets/images/tutorial_images/Demopreview.png')} style={{ width: '100%', height: '100%', }} />
+                    <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide1()}   style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                        <>
+                           
+                            <View style={styles.previewBTN} >
+                                        <Text style={styles.preview}>{strings('Add Item2')}</Text>
+                                    </View>
+                                    <View style={styles.info}>
+
+
+                                    </View>
+                                    <View style={{ alignItems: 'flex-end', marginHorizontal: 50,  }}>
+                                        <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+                                        <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Click here to preview and change style of your menu.</Text>
+                                    </View>
+                               
+                        </>
                     </TouchableOpacity>
                     :
                     null
             }
 
-            {
-                showtut
-                    ?
-                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide2()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                        <Image source={require('../assets/images/tutorial_images/Demovariants.png')} style={{ width: '100%', height: '100%', }} />
-                    </TouchableOpacity>
-                    :
-                    null
-            }
-           
-            <SafeAreaView style={{ flex: 1 }}>
+              
+
+
                 <DraggableFlatList
                     nestedScrollEnabled
                     data={dataItems}
@@ -221,10 +234,19 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                         
                     }}
                 />
+
             </SafeAreaView>
-            <TouchableOpacity style={styles.qrbutton} onPress={() => navigation.navigate('QR', { restaurant_id: route.params.restaurant_id, img: route.params.brandImage, url: route.params.public_url })}>
-                <Image source={require('../assets/images/icons/qr.png')} style={{ height: 80, width: 80 }} />
-            </TouchableOpacity>
+            
+            {
+                showtuts || showtutss
+                    ?
+                    null
+                    :
+                    <TouchableOpacity style={styles.qrbutton} onPress={() => navigation.navigate('QR', { restaurant_id: route.params.restaurant_id, img: route.params.brandImage, url: route.params.public_url })}>
+                        <Image source={require('../assets/images/icons/qr.png')} style={{ height: 80, width: 80 }} />
+                    </TouchableOpacity>
+            }
+           
             <RBSheet
                 ref={refRBSheet}
                 closeOnDragDown={true}
@@ -244,7 +266,32 @@ const MenuList = ({ navigation, user_id, token, getMenuItems, route, updateItemO
                     }
                 }}
             >
-                
+                {
+                    showtut
+                    ?
+                        <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide2()} style={{ paddingHorizontal: 20, backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            <View style={{ alignItems: 'center', marginTop: 10 }}>
+                                <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Select It, If item has multiple variants. like Small, Medium, Large </Text>
+                                <Image source={require('../assets/images/tutorial_images/Arrowdown1.png')} style={{ width: 70, height: 60, resizeMode: 'contain', }} />
+                            </View>
+                            <View style={{ marginTop: 10, flex: 1, alignItems: 'center' }}>
+                                <View style={styles.switchBox}>
+                                    <ToggleSwitch
+
+                                        onColor="#635CC9"
+                                        offColor="#635CC920"
+                                        label={'For different variants '}
+                                        labelStyle={{ color: "black", fontFamily: 'Poppins Medium', marginRight: 30 }}
+                                        size='medium'
+
+                                    />
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                :
+                null
+                }
+               
                 <AddNewItem closeFunc={() => refRBSheet.current.close()} currency={data1 && data1.menu.currency} menu_id={route.params.menu_id} navigation={navigation} />
             </RBSheet>
             <RBSheet
@@ -420,6 +467,16 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.02,
         //shadowRadius: 0.84,
-    }
+    },
+    switchBox:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginTop: 10,
+        marginBottom: 10,
+        marginRight: 30,
+        backgroundColor:'white',
+        borderRadius:3
+        
+    },
 
 })

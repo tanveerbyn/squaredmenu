@@ -67,7 +67,8 @@ const RegistrationScreen = ({navigation, register, signInAPIGoogle, signInAPIApp
     const [userGoogleInfo, setUserGoogleInfo] = React.useState({});
     const [loaded, setLoaded] = React.useState(false);
     const [userFacebookInfo, setUserFacebookInfo] = React.useState({});
-  
+    const [toltip, showtooltip] = React.useState(false);
+
     const onAppleButtonPress = async () => {
       try {
         const appleAuthRequestResponse = await appleAuth.performRequest({
@@ -260,24 +261,28 @@ const RegistrationScreen = ({navigation, register, signInAPIGoogle, signInAPIApp
     };
     const beginRegitration = async () => {
       if(name.trim().length < 1){
-        setError("Enter Name")
+        setError(strings('enter_name'))
         return
       }else if(email.trim().length < 1){
-        setError("Enter Email")
+        setError(strings('enter_email'))
         return
       }else if(password.trim().length < 1){
-        setError("Enter Password")
-        return
-      }else if(password !== password1){
-        setError("Password does not match.")
+        setError(strings('enter_pass'))
         return
       }else if(!strongRegex.test(password)){
-        setError("Please choose a stronger password, e.g. John@123, Smith$456")
+        //setError(strings('strong_pass'))
+        showtooltip(true)
         return
+      }else if(password !== password1){
+        showtooltip(false)
+        setError(strings('enterconf_pass'))
+        return
+      
       }else if(number.trim().length < 1){
-        setError("Enter Contact Number")
+        setError(strings('enter_contact'))
         return
       }
+      showtooltip(false)
       setclicked(true)
       var bodyFormData = new FormData();
       bodyFormData.append('name', name);
@@ -415,7 +420,26 @@ const RegistrationScreen = ({navigation, register, signInAPIGoogle, signInAPIApp
             color='#635CC9'
             onPress={changePwdType}
         />
+        
       </View>
+
+          {
+            toltip
+            ?
+              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)', borderRadius: 8, width: '65%', height: 100, justifyContent: 'center', paddingLeft: 10 }}>
+                  <Text style={{ fontSize: 13, color: 'white' }}>. Minimum 8 characters required</Text>
+                  <Text style={{ fontSize: 13, color: 'white' }}>. Atleast 1 capital letter required </Text>
+                  <Text style={{ fontSize: 13, color: 'white' }}>. Atleast 1 numerical letter required </Text>
+                  <Text style={{ fontSize: 13, color: 'white' }}>. Atleast 1 special character required </Text>
+                </View>
+              </View>
+              :
+              null
+          }
+         
+
+
       <View style={{position:'relative'}}>
         <TextInput
           style={styles.input}
@@ -453,7 +477,7 @@ const RegistrationScreen = ({navigation, register, signInAPIGoogle, signInAPIApp
         loading={clicked}
       />
         
-        <Text style={styles.forgotText}>or register using</Text>
+        <Text style={styles.forgotText}>{strings('reg_using')}</Text>
         <View style={styles.socialMedia}>
           <TouchableOpacity onPress={loginWithFacebook}>
             <Image
@@ -479,11 +503,11 @@ const RegistrationScreen = ({navigation, register, signInAPIGoogle, signInAPIApp
       {/* <Text onPress={()=>navigation.navigate('RegisterPromoCode')} style={styles.bottomText}>Register using promo code</Text> */}
       <View style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
         <TouchableOpacity onPress={()=>{Linking.openURL("https://www.squaredmenu.com/privacy.html")}}>
-          <Text style={styles.registerText}>Policy </Text>
+          <Text style={styles.registerText}>{strings('policy')} </Text>
         </TouchableOpacity>
-        <Text style={{...styles.registerText, color :'gray'}}>and</Text>
+        <Text style={{...styles.registerText, color :'gray'}}>{strings('and')}</Text>
         <TouchableOpacity onPress={()=>{Linking.openURL("https://www.squaredmenu.com/terms.html")}}>
-          <Text style={styles.registerText}> T&C</Text>
+          <Text style={styles.registerText}> {strings('tac')}</Text>
         </TouchableOpacity>
       </View>
         
@@ -508,12 +532,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
     marginBottom: 40,
-    marginLeft: 15,
+    marginHorizontal:10
+    //marginLeft: 15,
   },
   headingText: {
     color: 'white',
     fontFamily: 'Poppins Medium',
-    fontSize: wp('9'),
+    fontSize: wp('8'),
     
     lineHeight: 50 * 0.75,
     paddingTop: 40 - 35 * 0.75,

@@ -20,6 +20,7 @@ import {
 import SocialMediaIcon from '../components/SocialMediaIcon';
 import { verifyEmail } from '../store/action';
 import { connect } from 'react-redux';
+import {strings} from '../locales/i18n'
 
 const ThankYouRegistration = ({navigation, verifyEmail, user_id}) => {
   const resendVerification = async () => {
@@ -41,12 +42,12 @@ const ThankYouRegistration = ({navigation, verifyEmail, user_id}) => {
         </View>
 
       <View style={styles.heading}>
-        <Text style={styles.headingText}>Thank You </Text>
+        <Text style={styles.headingText}>{strings('Thank You')} </Text>
         <Text style={styles.contentHeadingText}>
-        You have successfully registered with SquaredMenu
+         {strings("You have successfully registered with SquaredMenu")}
         </Text>
         <Text style={styles.successMessage}>
-        Verify your account with a link sent to your registered email address.
+         {strings("Verify_account")}
         </Text>
 
       </View>
@@ -55,7 +56,7 @@ const ThankYouRegistration = ({navigation, verifyEmail, user_id}) => {
       <View style={styles.inputFields}>
         <View style={{paddingTop:hp('10')}}>
         <Button
-          title="Login Now"
+          title={strings("login_now")}
           titleStyle={{fontSize: 15}}
           buttonStyle={styles.btn1}
           containerStyle={{marginTop:hp('10')}}
@@ -67,7 +68,7 @@ const ThankYouRegistration = ({navigation, verifyEmail, user_id}) => {
           <Text
             onPress={resendVerification}
             style={styles.bottomText}>
-           Resend Verification Link
+            {strings('resend_link')}
           </Text>
         
         </TouchableOpacity>

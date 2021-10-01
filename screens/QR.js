@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Image, ImageBackground, TouchableOpacity, ScrollView, Linking } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, ImageBackground, TouchableOpacity, ScrollView, Linking, Alert } from 'react-native'
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen'
 import HeaderSVG from '../components/HeaderSVG'
 import MenuSection from '../components/MenuSection'
@@ -9,7 +9,8 @@ import { connect } from 'react-redux'
 import { Button } from 'react-native-elements'
 import Clipboard from '@react-native-clipboard/clipboard';
 import { strings } from '../locales/i18n'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Dimensions } from 'react-native'
 
 const QR = ({navigation, generateQR, sendQrOverMail, token, user_id, route}) => {
     console.log("brandimage",route.params)
@@ -19,7 +20,25 @@ const QR = ({navigation, generateQR, sendQrOverMail, token, user_id, route}) => 
     const [myQrLink, setMyQrLink] = useState(null)
     const [loading, setloading] = useState(false)
     const [copiedText, setCopiedText] = useState('');
+    const [showtuts, setGuide] = useState(true)
+    const [profile, setProfile] = useState(false)
     
+    useEffect(async()=> {
+        let res = await AsyncStorage.getItem('qropnmenu')
+        let result= JSON.parse(res)    
+        if(result == false) {
+          setGuide(false)
+        }
+      },[])
+
+      useEffect(async()=> {
+        let res = await AsyncStorage.getItem('printpdf')
+        let result= JSON.parse(res)
+        if(result == false) {
+          setProfile(false)
+        }
+      },[])
+
     useEffect(() => {
         getQR()
     }, []);
@@ -48,6 +67,7 @@ const QR = ({navigation, generateQR, sendQrOverMail, token, user_id, route}) => 
             Clipboard.setString(res.data.data.public_url);
             alert('Copied to Clipboard!');
         }else{
+            
             alert(res.data.message)
         }
     }
@@ -60,14 +80,76 @@ const QR = ({navigation, generateQR, sendQrOverMail, token, user_id, route}) => 
         const res = await sendQrOverMail(bodyFormData)
         setloading(false)
         if(res.data.status){
-            alert(strings('Alert1'))
+            console.log('0---', res.data.message)
+            
+            Alert.alert(
+                `${strings('Alert1')}`,
+                " ",
+                [
+                  { text: "OK", onPress: () => console.log("OK Pressed") }
+                ]
+              );
         }else{
+            
             alert(res.data.message)
         }
     }
+
+    const handle_guide =  (res) => {
+        setGuide(false)
+        setProfile(true)
+        AsyncStorage.setItem('qropnmenu', JSON.stringify(false))
+     }
+
+     const handle_guide1 =  (res) => {   
+        setProfile(false) 
+        AsyncStorage.setItem('printpdf', JSON.stringify(false))
+     }
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
+                {
+                    showtuts
+                    ?
+                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                    <View style={styles.banner} >
+
+
+                        <View style={styles.previewBTN} >
+                            <Text style={styles.preview}>{strings('QR Code Screen2')}</Text>
+                        </View>
+                        <View style={{ alignItems: 'flex-end', marginHorizontal: 10 }}>
+                            <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', top: 100 }} />
+                            <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", top: 100, }}>{'Tap here to view your menu as a customer'}</Text>
+                        </View>
+
+                    </View>
+                </TouchableOpacity>
+                :
+                null
+                }
+               
+               {
+                   profile
+                   ?
+                   <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+
+                   <View style={{ flex: 1, marginTop: Dimensions.get('screen').height / 1.7 }}>
+                       <View style={{ alignItems: 'center', marginHorizontal: 13, bottom: 50 }}>
+                           <Image source={require('../assets/images/tutorial_images/Arrowdown1.png')} style={{ width: 70, height: 70, resizeMode: 'contain', top: 100 }} />
+                           <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", bottom: 30 }}>{'Tap here to get your QR codes as PDF on your email'}</Text>
+                       </View>
+                       {!loading && <TouchableOpacity style={styles.btn2} onPress={getQRByMail}>
+                           <Text style={styles.btnText2}>{strings('QR Code Screen5')}</Text>
+                       </TouchableOpacity>}
+                   </View>
+
+               </TouchableOpacity>
+               :
+               null
+               }
+               
+
                 <HeaderSVG uri={route.params.img}/>
                 <View  style={styles.banner} >
                     <TouchableOpacity 

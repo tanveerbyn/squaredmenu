@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
         marginBottom: 8
     },
     activeText: {
-        fontSize: 18,
+        fontSize: 13,
         fontFamily: 'Poppins Medium',
         color: '#fff'
     },

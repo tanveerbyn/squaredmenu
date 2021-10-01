@@ -10,7 +10,7 @@ const NonVarientPrice = ({closeFunc, O_price, editPrice}) => {
         
         if(changed){ //Check for change in value
             if(price.trim().length < 1 ){
-                seterr("Enter Valid price")
+                seterr(strings('add_newvariant2'))
                 return
             }
             editPrice(price)
@@ -26,7 +26,7 @@ const NonVarientPrice = ({closeFunc, O_price, editPrice}) => {
         }
         let newValue = value.replace(',','.')
        
-        if(!isNaN(newValue) && Number(newValue) > 0){
+        if(!isNaN(newValue) && Number(newValue) >= 0){
             setChanged(true);
             setprice(newValue);
         }
@@ -35,13 +35,13 @@ const NonVarientPrice = ({closeFunc, O_price, editPrice}) => {
     return (
         <View style={styles.box}>
             <View>
-                <Text style={styles.title}>Edit Price</Text>
+                <Text style={styles.title}>{strings('Edit Price')}</Text>
                 <Text style={{textAlign: 'center', fontFamily: 'Poppins Medium', color: 'red'}}>{err}</Text>
                 <TextInput
                     style={styles.input}
                     onChangeText={value=>checkPrice(value)}
                     value={`${price}`}
-                    placeholder="Price"
+                    placeholder={strings('Add Item7')}
                     textAlign="center"
                     placeholderTextColor="#635CC9"
                     keyboardType="decimal-pad"

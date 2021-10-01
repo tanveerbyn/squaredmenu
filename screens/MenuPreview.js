@@ -19,7 +19,8 @@ const MenuPreview = ({navigation, route}) => {
         <SafeAreaView style={{backgroundColor:'#fff', flex:1, overflow:'hidden'}}>
             {!loading && <View style={styles.exitBtn}>
                 <TouchableOpacity style={styles.exbt} onPress={()=>{navigation.goBack()}}>
-                    <Text style={styles.btnText}>{strings('Business Home Screen3')}</Text>
+                    <Image source={require('../assets/images/tutorial_images/closenew.png')} style={{width:60, height:60,  resizeMode:'contain',}}/>
+                    {/* <Text style={styles.btnText}>{strings('Business Home Screen3')}</Text> */}
                 </TouchableOpacity>
             </View>}
             {/* {loading && <View style={{flexDirection:'column', justifyContent:'center', height:'100%'}}>
@@ -129,14 +130,14 @@ const styles = StyleSheet.create({
     },
     exitBtn:{
         position: 'absolute',
-        top: Platform.OS==='ios'?55:45,
-        right: 3,
+        top: Platform.OS==='ios'?20:0,
+        right: 0,
         zIndex: 1
     },
     exbt:{
-        backgroundColor: '#fff',
-        paddingHorizontal: 18,
-        paddingVertical: 7,
+        //backgroundColor: '#fff',
+       // paddingHorizontal: 18,
+        //paddingTop: 8,
         borderRadius: 23,
        
       

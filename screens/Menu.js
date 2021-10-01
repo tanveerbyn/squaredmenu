@@ -16,9 +16,21 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) => {
     const [data, setdata] = useState(null)
     const [dataItems, setDataItems] = useState([])
-    const [showtuts, setGuide] = useState(true)
+    const [showtuts, setGuide] = useState(false)
     const [profile, setProfile] = useState(false)
     const [profile1, setProfile1] = useState(false)
+    const [profile2, setProfile2] = useState(true)
+    const [profile3, setProfile3] = useState(false)
+
+  
+    useEffect(async()=> {
+        let res = await AsyncStorage.getItem('menuaddtuts')
+        let result= JSON.parse(res)    
+        if(result == false) {
+            setProfile2(false)
+        }
+      },[])
+
 
     useEffect(async()=> {
         let res = await AsyncStorage.getItem('qrtuts')
@@ -27,6 +39,7 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
           setGuide(false)
         }
       },[])
+     
 
     useEffect(async () => {
         let res = await AsyncStorage.getItem('edit')
@@ -40,7 +53,7 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
         let res = await AsyncStorage.getItem('drag')
         let result = JSON.parse(res)
         if (result == false) {
-            setProfile(false)
+            setProfile1(false)
         }
     }, [])  
 
@@ -52,6 +65,9 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
         const res = await getMenu(bodyFormData)
         setdata(res.data.data)
         setDataItems(res.data.data.menu)
+        
+       
+       
     }, [])
 
     useEffect(() => {
@@ -63,6 +79,10 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
             const res = await getMenu(bodyFormData)
             setdata(res.data.data)
             setDataItems(res.data.data.menu)
+            
+         
+           
+         
         });
 
         return unsubscribe;
@@ -89,7 +109,7 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
 
     const handle_guide = (res) => {
         setGuide(false)
-        setProfile(true)
+       
         AsyncStorage.setItem('qrtuts', JSON.stringify(false))
     }
     
@@ -101,42 +121,174 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
 
     const handle_guide2 = (res) => {
         setProfile1(false)
+        setGuide(true)
         AsyncStorage.setItem('drag', JSON.stringify(false))
     } 
+
+    const handle_guide3 = (res) => {
+        setProfile2(false)
+        setProfile(true)
+        AsyncStorage.setItem('menuaddtuts', JSON.stringify(false))
+    } 
+    const handle_guide4 = (res) => {
+        setProfile3(false)
+        setGuide(true)
+        AsyncStorage.setItem('stylechng', JSON.stringify(false))
+    } 
+
+//    const finalShowhide = async () => {
+//     let res = await AsyncStorage.getItem('menuaddtuts')
+//     let result = JSON.parse(res)
+//     console.log('final method call', result)
+    
+    
+//         if(dataItems && dataItems == [] ) {
+//             if(result == null) {
+//                 setProfile2(true)
+//             }
+//             else {
+//                 setProfile2(false)
+//             }
+            
+//         }
+//         else if(dataItems && dataItems.length == 0) {
+//             if(result == null) {
+//                 setProfile2(true)
+//             }
+//             else {
+//                 setProfile2(false)
+//             }
+//         }
+//         else {
+//             setProfile2(false)
+//         }
+  
+   
+//    }
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
             
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1, }}>
             {
                 showtuts
                     ?
-                    <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                        <Image source={require('../assets/images/tutorial_images/Demogenerate.png')} style={{ width: '100%', height: '100%', }} />
+                    <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide()}  style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            <View style={{ width: '100%', height: '100%', justifyContent: 'flex-end', alignItems: 'flex-end', bottom: 120 }}>
+                                <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", right: 15 }}>Here the QR Code.</Text>
+                                <Image source={require('../assets/images/tutorial_images/Arrowdown1.png')} style={{ width: 70, height: 70, resizeMode: 'contain', right: 30 }} />
+                            </View>
+                            <TouchableOpacity style={styles.qrbutton} onPress={() => navigation.navigate('QR', { restaurant_id: route.params.restaurant_id, img: route.params.brandImage, url: route.params.public_url })}>
+                                <Image source={require('../assets/images/icons/qr.png')} style={{ height: 80, width: 80 }} />
+                            </TouchableOpacity>
                     </TouchableOpacity>
                     :
                     null
             }
 
                 {
+                 
                     profile
                         ?
-                        <TouchableOpacity activeOpacity={1} onPress={() => handle_guide1()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                            <Image source={require('../assets/images/tutorial_images/Demodragposition.png')} style={{ width: '100%', height: '100%', }} />
-                        </TouchableOpacity>
+                        <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide1()}  style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            
+                            <View style={{justifyContent:'center', alignItems:'flex-end', right:50, flex:1, marginTop:30}}>
+                                <TouchableOpacity >
+                                    <Image source={require('../assets/images/icons/edit.png')} style={styles.editIcon} />
+                                </TouchableOpacity>
+                                <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', left:10}} />
+                                <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", right: 5 }}>Tap pencil icon to edit a menu</Text>
+                                
+                            </View>
+                    </TouchableOpacity>
                         :
                         null
+                       
                 }
 
                 {
+                   
                     profile1
                         ?
-                        <TouchableOpacity activeOpacity={1} onPress={() => handle_guide2()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-                            <Image source={require('../assets/images/tutorial_images/DemoEdititem.png')} style={{ width: '100%', height: '100%', }} />
-                        </TouchableOpacity>
+                        <TouchableOpacity activeOpacity={1} onPress={()=> handle_guide2()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            
+                            <View style={{justifyContent:'center', alignItems:'flex-end', marginHorizontal:25, flex:1, marginTop:30}}>
+                                <View style={{
+                                    backgroundColor:'white',
+                                    marginVertical:3,
+                                    bottom:5,
+                                    paddingHorizontal:5, borderRadius:5, right:12, paddingVertical:2
+                                }} >
+                                    <Image source={require('../assets/images/icons/drag_icon.png')} style={styles.dragImg} />
+                                </View>
+                                <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', left:10}} />
+                                <View style={{ alignItems: 'flex-end', width: '100%', }}>
+                                    <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Tap and drag to change the position of a menu</Text>
+                                </View>
+                                
+                                
+                            </View>
+                    </TouchableOpacity>
                         :
                         null
+                       
                 }
+
+               
+                
+                {
+
+                            profile2
+                            ?
+                       
+                            <TouchableOpacity activeOpacity={1} onPress={() => handle_guide3()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+
+                                <View source={require('../assets/images/banners/mask.png')} style={styles.banner} resizeMode="stretch">
+
+
+                                    <View style={styles.info}>
+
+                                    </View>
+                                </View>
+                                <NewMenuButton action={() => navigation.navigate('NewMenu', { restaurant_id: route.params.restaurant_id })} />
+                                <View style={{ alignItems: 'center', marginHorizontal: 50, }}>
+                                    <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+                                    <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Tap here to add menu.</Text>
+                                </View>
+                                <View style={{ marginBottom: 150 }}></View>
+                                
+                            </TouchableOpacity>
+                            :
+                            null
+                           
+                     
+                }
+
+                {/* {
+                    profile3
+                    ?
+                        <TouchableOpacity activeOpacity={1} onPress={() => handle_guide4()}  style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+                            <>
+
+                                <View style={styles.previewBTN} >
+                                    <Text style={styles.preview}>{strings('Add Item2')}</Text>
+                                </View>
+                                <View style={styles.info}>
+
+
+                                </View>
+                                <View style={{ alignItems: 'flex-end', marginHorizontal: 50, }}>
+                                    <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 70, resizeMode: 'contain', }} />
+                                    <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", }}>Click here to preview and change style of your menu.</Text>
+                                </View>
+
+                            </>
+                        </TouchableOpacity>
+                      :
+                      null 
+                } */}
+                
+                
                 <DraggableFlatList
                     nestedScrollEnabled
                     data={dataItems}
@@ -155,9 +307,9 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
                                 >
                                     <Image source={require('../assets/images/topbar/back.png')} style={{ height: 42, width: 42 }} />
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.previewBTN} onPress={() => navigation.navigate('MenuPreview', { themeURL: route.params.themeURL })}>
+                                {/* <TouchableOpacity style={styles.previewBTN} onPress={() => navigation.navigate('MenuPreview', { themeURL: route.params.themeURL })}>
                                     <Text style={styles.preview}>{strings('Business Home Screen2')}</Text>
-                                </TouchableOpacity>
+                                </TouchableOpacity> */}
                                 <View style={styles.info}>
                                     <View style={styles.nameContainer}>
                                         <Text numberOfLines={2} style={styles.name}>{data && data.restaurant.name}</Text>
@@ -174,9 +326,16 @@ const Menu = ({ navigation, user_id, token, getMenu, route, updateMenuOrder }) =
                     }}
                 />
             </SafeAreaView>
-            <TouchableOpacity style={styles.qrbutton} onPress={() => navigation.navigate('QR', { restaurant_id: route.params.restaurant_id, img: route.params.brandImage, url: route.params.public_url})}>
-                <Image source={require('../assets/images/icons/qr.png')} style={{ height: 80, width: 80 }} />
-            </TouchableOpacity>
+            {
+                profile || profile1 || profile2 || showtuts
+                ?
+                null
+                :
+                    <TouchableOpacity style={styles.qrbutton} onPress={() => navigation.navigate('QR', { restaurant_id: route.params.restaurant_id, img: route.params.brandImage, url: route.params.public_url })}>
+                        <Image source={require('../assets/images/icons/qr.png')} style={{ height: 80, width: 80 }} />
+                    </TouchableOpacity>
+            }
+           
         </SafeAreaView>
     )
 }
@@ -243,25 +402,14 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
     card: {
-        backgroundColor: '#fff',
-        borderRadius: 17,
-        width: widthPercentageToDP(84),
-        height: 115,
-        padding: 10,
+       
+        
         marginHorizontal: widthPercentageToDP(8),
         marginTop: 40,
-        elevation:2,
+        
 //ios
-        shadowColor: "#d4d4d4",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.1,
-        shadowRadius: 3.84,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center'
+        
+       
     },
     subBox: {
         display: 'flex',
@@ -269,8 +417,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: 97,
         height: '100%',
-        backgroundColor: '#635CC910',
-        borderRadius: 10,
+       
     },
     new: {
         fontFamily: 'Poppins Medium',
@@ -294,6 +441,79 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.02,
         //shadowRadius: 0.84,
+    },
+    card:{
+        backgroundColor: '#fff',
+        borderRadius: 17,
+        width: widthPercentageToDP(84),
+        height: 90,
+        padding: 10,
+        marginHorizontal: widthPercentageToDP(8),
+        marginTop: 15,
+        elevation:2,
+//ios
+        shadowColor: "#d4d4d4",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 3.84,
+        //ios
+        shadowColor: "#d4d4d4",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.10,
+        shadowRadius: 3.84,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'space-between'
+    },
+    part1:{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center' ,
+        width: '80%',
+        paddingRight: 50
+    },
+    subBox: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 80,
+        height: '100%',
+        backgroundColor:'#635CC910',
+        borderRadius: 10,
+    },
+    new:{
+        fontFamily: 'Poppins Medium',
+        color: '#635CC9',
+        fontSize: 15,
+        marginLeft: 15
+    },
+    plus:{
+        width: '100%',
+        height: '100%',
+        resizeMode: 'cover',
+        borderRadius: 10
+    },
+    editIcon:{
+        height: 45,
+        width: 45
+    },
+    actBtn:{
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: '100%',
+    },
+    dragImg:{
+        width: 20, 
+        height: 20,
+        
     }
 
 })

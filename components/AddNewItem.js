@@ -16,10 +16,10 @@ const AddNewItem = ({closeFunc, user_id, token, menu_id, addNewItem, successClos
     const [err, setErr] = useState("")
     const beginCreation = () => {
         if(name.trim().length < 1){
-            setErr("Please enter Name")
+            setErr(strings("addmenu_item1"))
             return
         }else if(price.trim().length < 1 && !isOn){
-            setErr("Please enter Price")
+            setErr(strings("addmenu_item2"))
             return
         }
         navigation.navigate('NewDish',{menu_id:menu_id, name:name, has_variants:!isOn?0:1, price:price, currency:currency})
@@ -86,13 +86,16 @@ const AddNewItem = ({closeFunc, user_id, token, menu_id, addNewItem, successClos
         }
         let newValue = value.replace(',','.')
        
-        if(!isNaN(newValue) && Number(newValue) > 0){
+        if(!isNaN(newValue) && Number(newValue) >= 0){
           
             setPrice(newValue);
         }
     }
     return (
+        <>
+      
         <View style={styles.box}>
+            
             <View>
                 <Text style={styles.title}>{strings('Add Item4')}</Text>
                 <Text style={{textAlign:'center', color:'red', fontFamily: 'Poppins Bold'}}>{err}</Text>
@@ -151,6 +154,7 @@ const AddNewItem = ({closeFunc, user_id, token, menu_id, addNewItem, successClos
                 />}
             </View>
         </View>
+        </>
     )
 }
 const mapStateToProps = state => {

@@ -8,10 +8,10 @@ const AddNewVarient = ({closeFunc, addVariant}) => {
     const [err, seterr] = useState("")
     const handleSubmit = () => {
         if(name.trim().length < 1){
-            seterr("Enter Valid Variant Name")
+            seterr(strings('add_newvariant1'))
             return
         }else if(price.trim().length < 1 ){
-            seterr("Enter Valid price")
+            seterr(strings('add_newvariant2'))
             return
         }
         addVariant(name,price)
@@ -23,7 +23,7 @@ const AddNewVarient = ({closeFunc, addVariant}) => {
         }
         let newValue = value.replace(',','.')
        
-        if(!isNaN(newValue) && Number(newValue) > 0){
+        if(!isNaN(newValue) && Number(newValue) >= 0){
          
             setprice(newValue);
         }
@@ -37,7 +37,7 @@ const AddNewVarient = ({closeFunc, addVariant}) => {
                     style={styles.input}
                     onChangeText={setname}
                     value={name}
-                    placeholder={strings('ex small medium large')}
+                    placeholder={strings('sizes')}
                     textAlign="center"
                     placeholderTextColor="#635CC9"
                     
@@ -47,7 +47,7 @@ const AddNewVarient = ({closeFunc, addVariant}) => {
                     style={styles.input}
                     onChangeText={(value)=>checkPrice(value)}
                     value={price}
-                    placeholder="Price"
+                    placeholder={strings('Add Item7')}
                     textAlign="center"
                     placeholderTextColor="#635CC9"
                     keyboardType="decimal-pad"

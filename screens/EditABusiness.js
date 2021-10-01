@@ -56,6 +56,7 @@ const EditABusiness = ({ navigation, user_id, token, addNewRestaurant, route , g
   const updateCurr = () =>{};
   useEffect(() => {
     getListOfCurrency()
+    console.log('edit scree')
   }, [])
   const getListOfCurrency = async () => {
     var bodyFormData = new FormData();
@@ -103,13 +104,13 @@ const EditABusiness = ({ navigation, user_id, token, addNewRestaurant, route , g
   }
   const handleSubmit = async () => {
     if(name.trim().length < 1){
-      setErr("Enter Valid Name")
+      setErr(strings('valid_busname'))
       return
     }else if(address.trim().length < 1){
-      setErr("Enter Valid Address")
+      setErr(strings('valid_bussname'))
       return
     }else if(curr.trim().length < 1){
-      setErr("Enter Valid Currency")
+      setErr(strings('valid_currency'))
       return
     }
     setclicked(true)

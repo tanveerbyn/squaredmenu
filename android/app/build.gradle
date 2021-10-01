@@ -143,8 +143,8 @@ android {
         applicationId "com.squaredmenu"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 5
-        versionName "3.2"
+        versionCode 7
+        versionName "3.4"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
     }

@@ -196,7 +196,14 @@ const refresh = async () => {
 
           <Text style={styles.nameText}>{name}</Text>
           <Text style={styles.smallText}>{email}</Text>
-          <Text style={styles.smallText}>**********</Text>
+          {
+            user_type === "normal"
+            ?
+            <Text style={styles.smallText}>**********</Text>
+            :
+            null
+          }
+        
           {/* <View style={styles.memberView}>
           <View style={styles.featuresView}>
             {data && data.plans.map(plan => {

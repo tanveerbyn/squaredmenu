@@ -158,7 +158,7 @@ export const getMenu = (data) => async (dispatch, getState) => {
             data: data,
             headers: { 'Content-Type': 'multipart/form-data' }
         })
-        // console.log("GetMenu =>",res.data)
+         console.log("GetMenu =>",res.data)
         return res
     } catch (err) {
         crashlytics().recordError(err);
@@ -513,17 +513,15 @@ export const updateItemOrder = (data) => async (dispatch, getState) => {
 
 }
 export const deleteMenu = (data) => async (dispatch, getState) => {
-    try {
+    console.log('data+++++', data)
         const res = await axios({
             method: 'post',
             url: `${API_URL}/delete-menu`,
             data: data,
             headers: { 'Content-Type': 'multipart/form-data' }
         })
-        console.log("Delete Menu =>", res.data)
+        console.log("Delete Menu =>", res)
         return res
-    } catch (err) {
-        crashlytics().recordError(err);
-    }
+   
 
 };

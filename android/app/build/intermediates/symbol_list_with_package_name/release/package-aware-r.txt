@@ -1672,17 +1672,9 @@ drawable assets_images_onboarding_part3
 drawable assets_images_onboarding_part4
 drawable assets_images_profile_profile
 drawable assets_images_topbar_back
-drawable assets_images_tutorial_images_demoaddbusiness
-drawable assets_images_tutorial_images_demoaddimage
-drawable assets_images_tutorial_images_demoadditem
-drawable assets_images_tutorial_images_demodragposition
-drawable assets_images_tutorial_images_demoedititem
-drawable assets_images_tutorial_images_demogenerate
-drawable assets_images_tutorial_images_demogotoprofile
-drawable assets_images_tutorial_images_demolanguage
-drawable assets_images_tutorial_images_demopreview
-drawable assets_images_tutorial_images_demovariants
-drawable assets_images_tutorial_images_inactive
+drawable assets_images_tutorial_images_arrow16
+drawable assets_images_tutorial_images_arrowdown1
+drawable assets_images_tutorial_images_closenew
 drawable avd_hide_password
 drawable avd_show_password
 drawable background_splash
@@ -1746,6 +1738,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
+drawable ic_dropdown
 drawable ic_edit_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
@@ -1796,6 +1789,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable redbox_top_border_background
+drawable spinner_dropdown_background
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1958,6 +1952,8 @@ id design_navigation_view
 id dialog_button
 id disableHome
 id display_always
+id dropdown_background
+id dropdown_icon
 id dropdown_menu
 id edit_query
 id end
@@ -2411,6 +2407,7 @@ raw locales_en
 raw locales_es
 raw locales_fr
 raw locales_it
+raw node_modules_axios_package
 raw node_modules_cssselect_lib_procedure
 raw node_modules_csstree_data_patch
 raw node_modules_csstree_package

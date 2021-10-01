@@ -12,10 +12,10 @@ const EditVarient = ({defaultname, defaultprice, pos, closeFunc, editVariant}) =
     const [err, seterr] = useState("")
     const handleSubmit = () => {
         if(name.trim().length < 1){
-            seterr("Enter Valid Varient Name")
+            seterr(strings('add_newvariant1'))
             return
         }else if(`${nprice}`.trim().length < 1 ){
-            seterr("Enter Valid price")
+            seterr(strings('add_newvariant2'))
             return
         }
         editVariant(name,nprice,pos)
@@ -27,7 +27,7 @@ const EditVarient = ({defaultname, defaultprice, pos, closeFunc, editVariant}) =
         }
         let newValue = value.replace(',','.')
        
-        if(!isNaN(newValue) && Number(newValue) > 0){
+        if(!isNaN(newValue) && Number(newValue) >= 0){
            
             setnprice(newValue);
         }
@@ -35,13 +35,13 @@ const EditVarient = ({defaultname, defaultprice, pos, closeFunc, editVariant}) =
     return (
         <View style={styles.box}>
             <View>
-                <Text style={styles.title}>{styles("Edit Variant")}</Text>
+                <Text style={styles.title}>{strings("Edit Variant")}</Text>
                 <Text style={{textAlign: 'center', fontFamily: 'Poppins Medium', color: 'red'}}>{err}</Text>
                 <TextInput
                     style={styles.input}
                     onChangeText={setname}
                     value={name}
-                    placeholder="Name"
+                    placeholder={strings('Add Item6')}
                     textAlign="center"
                     placeholderTextColor="#635CC9"
                     
@@ -50,7 +50,7 @@ const EditVarient = ({defaultname, defaultprice, pos, closeFunc, editVariant}) =
                     style={styles.input}
                     onChangeText={value=>checkPrice(value)}
                     value={`${nprice}`}
-                    placeholder="Price"
+                    placeholder={strings('Add Item7')}
                     textAlign="center"
                     placeholderTextColor="#635CC9"
                     keyboardType="decimal-pad"

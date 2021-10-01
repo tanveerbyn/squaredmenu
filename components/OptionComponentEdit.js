@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import { widthPercentageToDP } from 'react-native-responsive-screen'
 
 
-const OptionComponentEdit = ({name, option_id, selectThisOption, deselectThisOption, is_checked, image}) => {
+const OptionComponentEdit = ({name, option_id, selectThisOption, deselectThisOption, is_checked, image, black_image}) => {
     const [active, setactive] = useState(is_checked === 1? true: false)
     const toggleActivity = () => {
         
@@ -19,7 +19,7 @@ const OptionComponentEdit = ({name, option_id, selectThisOption, deselectThisOpt
     return (
         <TouchableOpacity style={active?styles.active:styles.inactive} onPress={toggleActivity}>
             {/* <Image style={styles.jar} source={active?require('../assets/images/icons/jar_white.png'):require('../assets/images/icons/jar.png')} /> */}
-            <Image style={styles.jar} source={{uri: image}} />
+            <Image style={styles.jar} source={{uri: active ? image : black_image}} />
             <Text style={active?styles.activeText:styles.inactiveText}>{name}</Text>
             {active && <Image style={styles.tick} source={require('../assets/images/icons/option_tick.png')} />}
         </TouchableOpacity>
@@ -55,12 +55,12 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     activeText: {
-        fontSize: 18,
+        fontSize: 13,
         fontFamily: 'Poppins Medium',
         color: '#fff'
     },
     inactiveText: {
-        fontSize: 18,
+        fontSize: 13,
         fontFamily: 'Poppins Medium',
         color: '#000',
         marginLeft: 10

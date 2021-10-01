@@ -73,14 +73,14 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
   const [online, setonline] = useState(true)
   const [showtuts, setGuide] = useState(true)
   
-  useEffect(async()=> {
-    let res = await AsyncStorage.getItem('logtuts')
-    let result= JSON.parse(res)
-    console.log('ressss-----------', res)
-    if(result == false) {
-      setGuide(false)
-    }
-  },[])
+  // useEffect(async()=> {
+  //   let res = await AsyncStorage.getItem('logtuts')
+  //   let result= JSON.parse(res)
+  //   console.log('ressss-----------', res)
+  //   if(result == false) {
+  //     setGuide(false)
+  //   }
+  // },[])
 
   useEffect(async() => {
    
@@ -288,10 +288,10 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
   };
   const startLogin = async () => {
     if (email.trim().length < 1) {
-      setError("Enter Email")
+      setError(strings('enter_email'))
       return
     } else if (password.trim().length < 1) {
-      setError("Enter Password")
+      setError(strings('enter_pass'))
       return
     }
     setclicked(true)
@@ -315,7 +315,7 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
           ToastAndroid.BOTTOM
         )
       } else {
-        AlertIOS.alert(res.data.message)
+        //alert(res.data.message)
       }
     } else {
       if (Platform.OS === 'android') {
@@ -325,7 +325,7 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
           ToastAndroid.BOTTOM
         )
       } else {
-        AlertIOS.alert(res.data.message)
+        alert(res.data.message)
       }
     }
   }
@@ -346,15 +346,34 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
 
   };
 
-  const handle_guide =  (res) => {
-     setGuide(false)
-     AsyncStorage.setItem('logtuts', JSON.stringify(false))
-  }
+  // const handle_guide =  (res) => {
+  //    setGuide(false)
+  //    AsyncStorage.setItem('logtuts', JSON.stringify(false))
+  // }
 
   return (
    
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView>
+     
+      <ScrollView contentContainerStyle={{flexGrow:1}} >
+        {/* {
+          showtuts
+          ?
+            <TouchableOpacity activeOpacity={1} onPress={() => handle_guide()} style={{ backgroundColor: 'rgba(0,0,0,0.8)', position: 'absolute', zIndex: 1, width: '100%', height: '100%', }}>
+              <TouchableOpacity style={styles.langPicker} >
+                <Image source={require('../assets/images/flags/globe.png')} style={{ height: 39, width: 39 }} />
+              </TouchableOpacity>
+              <View style={{ justifyContent: 'center', alignItems: 'flex-end', position: 'absolute', zIndex: 1, right: 20, width: 200, height: 200, top: 45 }}>
+                <Image source={require('../assets/images/tutorial_images/Arrow16.png')} style={{ width: 70, height: 100, resizeMode: 'contain', left: 25, top: 10 }} />
+                <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", top: 15 }}>You can choose a language here</Text>
+              </View>
+            </TouchableOpacity>
+            :
+            null
+        } */}
+        
+
+      
         {/* <Bg1
         height={hp('40%')}
         width={wp('100%')}
@@ -366,16 +385,8 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
 
 
       /> */}
-      {
-          showtuts
-            ?
-            <TouchableOpacity activeOpacity={1} onPress={()=>handle_guide()} style={{ position: 'absolute', zIndex: 1, width: '100%', height: '100%' }}>
-              <Image source={require('../assets/images/tutorial_images/DemoLanguage.png')} style={{ width: '100%', height: '100%', }} />
-            </TouchableOpacity>
-            :
-            null
-      }
-       
+     
+        
         <Image source={require('../assets/images/banners/addABuisness.png')} style={styles.banner} />
 
         <View style={styles.topElements}>
@@ -472,6 +483,7 @@ const Login = ({ navigation, login, signInAPIGoogle, signInAPIApple, lang }) => 
           <Image source={require('../assets/images/flags/globe.png')} style={{height:39, width: 39}}/>
         </TouchableOpacity>
       </ScrollView>
+      
       <RBSheet
         ref={languageRBSheet}
         closeOnDragDown={true}
