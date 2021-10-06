@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_vector.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_vector.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_locales_it.json.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\locales_it.json"
     },
@@ -120,6 +124,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_edit.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_printer.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_printer.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_node_modules_reactnative_libraries_newappscreen_components_logo.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\node_modules_reactnative_libraries_newappscreen_components_logo.png"
     },
@@ -128,12 +136,16 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_location.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_node_modules_reactnativevectoricons_glyphmaps_octicons.json.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\node_modules_reactnativevectoricons_glyphmaps_octicons.json"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_thumbnail.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_thumbnail.png"
     },
     {
-        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_node_modules_reactnativevectoricons_glyphmaps_octicons.json.flat",
-        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\node_modules_reactnativevectoricons_glyphmaps_octicons.json"
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_promounlock.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_promounlock.png"
     },
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_camera.png.flat",
@@ -168,8 +180,16 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_contentcopy.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_contentcopy.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_onboarding_part1.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_onboarding_part1.png"
+    },
+    {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_eye.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_eye.png"
     },
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_notification.png.flat",
@@ -248,6 +268,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_tick.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_empty_circle.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_empty_circle.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_node_modules_reactnativeratings_dist_images_star.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_star.png"
     },
@@ -296,6 +320,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\node_modules_reactnativeratings_dist_images_rocket.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_download.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_download.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -322,6 +350,10 @@
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_edit_transparent.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_edit_transparent.png"
+    },
+    {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_circle.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_circle.png"
     },
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
@@ -370,6 +402,10 @@
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_qr.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_qr.png"
+    },
+    {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_goldencard.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_goldencard.png"
     },
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_locales_fr.json.flat",
@@ -424,6 +460,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\node_modules_domserializer_foreignnames.json"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_seat1.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_seat1.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tutorial_images_arrow16.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tutorial_images_arrow16.png"
     },
@@ -456,6 +496,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\node_modules_reactnativevectoricons_glyphmaps_entypo.json"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_qrcode.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_qrcode.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_onboarding_part2.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_onboarding_part2.png"
     },
@@ -478,5 +522,9 @@
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_icon.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_tablearea_email.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_tablearea_email.png"
     }
 ]

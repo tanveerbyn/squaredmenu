@@ -263,7 +263,7 @@ const EditABusiness = ({ navigation, user_id, token, addNewRestaurant, route , g
           placeholderTextColor="#635CC9"
 
         /> */}
-        <TextInput
+        {/* <TextInput
           style={styles.input}
           onChangeText={value=>onChangeTable(value.replace(/[^0-9]/g, ''))}
           value={table}
@@ -271,7 +271,7 @@ const EditABusiness = ({ navigation, user_id, token, addNewRestaurant, route , g
           textAlign="center"
           placeholderTextColor="#635CC9"
           keyboardType="number-pad"
-        />
+        /> */}
       </View>
       
       <TouchableOpacity style={styles.inputselectSheet} onPress={()=>refRBSheetCurrency.current.open()}>

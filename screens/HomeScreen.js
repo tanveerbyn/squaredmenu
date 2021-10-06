@@ -23,6 +23,7 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
     const [showtuts, setGuide] = useState(true)
     const [profile, setProfile] = useState(false)
     const [profile1, setProfile1] = useState(false)
+   
 
     useEffect(async()=> {
         let res = await AsyncStorage.getItem('addbustuts')

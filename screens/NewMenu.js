@@ -219,12 +219,12 @@ const handleSubmit = async () => {
           <View style={{alignItems: 'flex-end', marginTop:5, marginHorizontal:10}}>
            
             <ToggleSwitch
-              isOn={isOn}
+              isOn={true}
               onColor="#635CC9"
               offColor="#635CC920"
               labelStyle={{color: 'black', fontFamily: 'Poppins Medium'}}
               size="medium"
-             
+              onToggle={() =>  handle_guide1()}
             />
           </View>
           
@@ -238,6 +238,7 @@ const handleSubmit = async () => {
           :
           null
       }
+      
         <TouchableOpacity onPress={() => refRBSheet.current.open()} >
         
         {!photo?<Image

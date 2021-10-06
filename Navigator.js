@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator , CardStyleInterpolators} from '@react-navigation/stack';
 import OnboardingScreen from './screens/OnboardingScreen';
 
 // Screens
@@ -30,6 +30,12 @@ import NewMenu from './screens/NewMenu';
 import NewDish from './screens/NewDish';
 import EditABusiness from './screens/EditABusiness';
 import I18n from 'react-native-i18n';
+import AddArea from './screens/AddArea';
+import AddTable from './screens/AddTable';
+import Promounlock from './screens/PromoUnlock';
+
+
+
 
 function OnboardingStack(){
     const Onboard = createStackNavigator()
@@ -74,8 +80,8 @@ function MainStack(){
     const Main = createStackNavigator()
     return(
         
-        <NavigationContainer>
-            <Main.Navigator headerMode="none">
+        <NavigationContainer >
+            <Main.Navigator headerMode="none"  >
                 <Main.Screen name="HomeScreen" component={HomeScreen} />
                 <Main.Screen name="AddABusiness" component={AddABusiness} />
                 <Main.Screen name="EditABusiness" component={EditABusiness} />
@@ -92,6 +98,9 @@ function MainStack(){
                 <Main.Screen name="Notification" component={Notifications} />
                 {/* <Main.Screen name="LocationTest" component={LocationTest} /> */}
                 <Main.Screen name="NewDish" component={NewDish} />
+                <Main.Screen name="AddArea" component={AddArea} />
+                <Main.Screen name="AddTable" component={AddTable} />
+                <Main.Screen name="Promounlock" component={Promounlock} />
             </Main.Navigator>
         </NavigationContainer>
     )
