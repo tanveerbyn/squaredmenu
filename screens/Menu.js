@@ -492,9 +492,9 @@ const Menu = ({
             style={{
               position: "absolute",
               left: 35,
-              top: heightPercentageToDP(82),
+              top: heightPercentageToDP(83),
               width: "67%",
-              height: 80,
+              height: 70,
               backgroundColor: "#fff",
               padding: 0,
               borderRadius: 20,
