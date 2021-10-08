@@ -60,6 +60,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_logoinapp_logoflat.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_pencil.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_pencil.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\raw_node_modules_reactnativevectoricons_glyphmaps_fontisto.json.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\raw\\node_modules_reactnativevectoricons_glyphmaps_fontisto.json"
     },
@@ -304,6 +308,10 @@
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_onboarding_part3.png"
     },
     {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_nextcopy.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_nextcopy.png"
+    },
+    {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_plus.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_plus.png"
     },
@@ -474,6 +482,10 @@
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_notification.png.flat",
         "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_notification.png"
+    },
+    {
+        "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_assets_images_icons_info.png.flat",
+        "source": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\generated\\res\\react\\release\\drawable-mdpi\\assets_images_icons_info.png"
     },
     {
         "merged": "D:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",

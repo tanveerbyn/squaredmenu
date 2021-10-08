@@ -1068,6 +1068,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color navajowhite
 color navy
+color notif
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -1655,11 +1656,14 @@ drawable assets_images_icons_goldencard
 drawable assets_images_icons_google
 drawable assets_images_icons_hand
 drawable assets_images_icons_imageicon
+drawable assets_images_icons_info
 drawable assets_images_icons_location
+drawable assets_images_icons_nextcopy
 drawable assets_images_icons_notif
 drawable assets_images_icons_nuts
 drawable assets_images_icons_option_tick
 drawable assets_images_icons_pen
+drawable assets_images_icons_pencil
 drawable assets_images_icons_plus
 drawable assets_images_icons_promounlock
 drawable assets_images_icons_qr

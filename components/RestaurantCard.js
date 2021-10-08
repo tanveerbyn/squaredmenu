@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import FastImage from "react-native-fast-image";
 import { widthPercentageToDP, heightPercentageToDP } from "react-native-responsive-screen";
@@ -6,9 +6,12 @@ import { widthPercentageToDP, heightPercentageToDP } from "react-native-responsi
 const RestaurantCard = ({ navigation, name, data, disable }) => {
     const [show, setShow] = useState(false);
     
+    // useEffect(()=>{
+    //   console.log('Card res -', data.name)
+    // })
     const manage_Table = ()=> {
       setShow(false)
-      navigation.navigate("AddArea")
+      navigation.navigate("AddArea",{addarea_data : data})
     }
     const edit_Rest = ()=> {
       setShow(false)

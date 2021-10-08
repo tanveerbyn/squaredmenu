@@ -1,4 +1,4 @@
-#Wed Oct 06 18:13:13 IST 2021
+#Fri Oct 08 17:47:12 IST 2021
 base.0=D\:\\AndroidReact_Projects\\SM\\squaredmenu\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

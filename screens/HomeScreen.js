@@ -96,7 +96,7 @@ const HomeScreen = ({ navigation, logout, user_id, token, image, getRestaurants 
             url: `https://admin.squaredmenu.com/api/restaurant/get-notifications`, data: bodyFormData,
             headers: { 'Content-Type': 'multipart/form-data' }
         })
-        console.log("Home Notif response =>", res.data)
+        //console.log("Home Notif response =>", res.data)
         ServiceConstant.set_notf_count(res.data.unread_count)
     }
 

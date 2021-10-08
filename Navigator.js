@@ -33,7 +33,7 @@ import I18n from 'react-native-i18n';
 import AddArea from './screens/AddArea';
 import AddTable from './screens/AddTable';
 import Promounlock from './screens/PromoUnlock';
-
+import WebMenu from './screens/WebviewMenu';
 
 
 
@@ -101,6 +101,7 @@ function MainStack(){
                 <Main.Screen name="AddArea" component={AddArea} />
                 <Main.Screen name="AddTable" component={AddTable} />
                 <Main.Screen name="Promounlock" component={Promounlock} />
+                <Main.Screen name="WebMenu" component={WebMenu} />
             </Main.Navigator>
         </NavigationContainer>
     )

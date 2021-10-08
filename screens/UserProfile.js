@@ -279,37 +279,52 @@ const UserProfile = ({
             </View>
           </View> */}
 
-
-          <TouchableOpacity onPress={()=> navigation.navigate('Promounlock')}>
-            <Text style={styles.smallHeadingText}>
-              {"Go Pro!"}
-            </Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Promounlock")}>
+            <Text style={styles.smallHeadingText}>{"Go Pro!"}</Text>
             <Text style={styles.smallShareText}>Starting from $9.99/Month</Text>
           </TouchableOpacity>
-        
+
+          <TouchableOpacity
+            style={{
+              marginTop: 10,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+            onPress={() => navigation.navigate("WebMenu")}
+          >
+            <View>
+              <Text style={styles.smallHeadingText}>
+                {"Let us create menu"}
+              </Text>
+              <Text style={styles.smallShareText}>
+                Sit back and relax, we will create your menu
+              </Text>
+            </View>
+            <View style={{backgroundColor:'rgba(99, 92, 201, 0.1)', height:40, width:40,borderRadius:8, alignItems:'center', justifyContent:'center'}}>
+              <Image
+                style={{ width: 20, height: 20, resizeMode:'contain' }}
+                source={require("../assets/images/icons/nextCopy.png")}
+              />
+            </View>
+          </TouchableOpacity>
+
           <View style={styles.memberView}>
             <View style={styles.featuresView}>
-              
-                    <View  style={styles.featuresView}>
-                      <View style={styles.membershipView}>
-                        <View>
-                          <Text style={styles.smallHeadingText}>
-                          Premium
-                          </Text>
-                          <Text style={styles.smallSubHeadingText}>
-                          Premium $39.99/Month
-                          </Text>
-                        </View>
-                      </View>
-                    </View>
-                
-                
+              <View style={styles.featuresView}>
+                <View style={styles.membershipView}>
+                  <View>
+                    <Text style={styles.smallHeadingText}>Premium</Text>
+                    <Text style={styles.smallSubHeadingText}>
+                      Premium $39.99/Month
+                    </Text>
+                  </View>
+                </View>
+              </View>
             </View>
             <View style={styles.renewView}>
               <Text style={styles.renewText}>Renew Date</Text>
-              <Text style={styles.renewDateText}>
-                10 March 2021
-              </Text>
+              <Text style={styles.renewDateText}>10 March 2021</Text>
             </View>
           </View>
 
@@ -408,7 +423,7 @@ const UserProfile = ({
             </View>
           </View>
         </View>
-    
+
         <View style={styles.bottomBtn}>
           {data && (
             <TouchableOpacity
