@@ -139,7 +139,7 @@ const QR = ({navigation, generateQR, sendQrOverMail, token, user_id, route}) => 
                            <Image source={require('../assets/images/tutorial_images/Arrowdown1.png')} style={{ width: 70, height: 70, resizeMode: 'contain', top: 100 }} />
                            <Text style={{ color: 'white', fontSize: 18, fontFamily: "Poppins Regular", bottom: 30 }}>{'Tap here to get your QR codes as PDF on your email'}</Text>
                        </View>
-                       {!loading && <TouchableOpacity style={styles.btn2} onPress={getQRByMail}>
+                       {!loading && <TouchableOpacity style={styles.btn2} onPress={()=> handle_guide1()}>
                            <Text style={styles.btnText2}>{strings('QR Code Screen5')}</Text>
                        </TouchableOpacity>}
                    </View>

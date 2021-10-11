@@ -379,9 +379,7 @@ const Menu = ({
             </View>
             <NewMenuButton
               action={() =>
-                navigation.navigate("NewMenu", {
-                  restaurant_id: route.params.restaurant_id,
-                })
+                handle_guide3()
               }
             />
             <View style={{ alignItems: "center", marginHorizontal: 50 }}>
